@@ -4,7 +4,6 @@
  */
 get_header();
  ?>
- <?php error_reporting(E_ALL); ?>
 
 <div class="container">
 	<div class="row">
