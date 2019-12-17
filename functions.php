@@ -259,7 +259,35 @@ function create_post_type() {
         'taxonomies' => array( 'category', 'post_tag' ),
 		'supports' => array( 'title', 'editor', 'author', 'comments', 'thumbnail', 'excerpt', 'page-attributes')
         )  
-    ); 
+    );
+
+    register_post_type( 'empresas',  
+        array(  
+            'labels' => array(  
+                'name' => __( 'Empresas' ),  
+                'singular_name' => __( 'Empresa' )  
+            ),  
+        'public' => true,  
+        'menu_position' => 4,
+		'hierarchical' => true,		
+        'taxonomies' => array( 'category', 'post_tag' ),
+		'supports' => array( 'title', 'editor', 'author', 'comments', 'thumbnail', 'excerpt', 'page-attributes')
+        )  
+    );  
+
+    register_post_type( 'paqueterias-en',  
+        array(  
+            'labels' => array(  
+                'name' => __( 'Paqueterias en Ciudad' ),  
+                'singular_name' => __( 'Paqueteria en Ciudad' )  
+            ),  
+        'public' => true,  
+        'menu_position' => 5,
+		'hierarchical' => true,		
+        'taxonomies' => array( 'category', 'post_tag' ),
+		'supports' => array( 'title', 'editor', 'author', 'comments', 'thumbnail', 'excerpt', 'page-attributes')
+        )  
+    );
 	
 } 
 
