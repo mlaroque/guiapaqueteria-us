@@ -1,97 +1,99 @@
 
 
-<div class="col-md-12 text-center">   
-  <h2 class="blanco upper">COTIZA AQUÍ</h2>
-  <small><a class="pointer blanco" data-toggle="modal" data-target=".antesdecotizar"><b>Importante</b>: Antes de Cotizar</a></small>
-  <div class="stepwizard">
-      <div class="stepwizard-row setup-panel">
-        <div class="stepwizard-step">
-        <span class="step">1</span>
-        </div>
-        <div class="stepwizard-step">
-        <span class="step">2</span>
-        </div>
-        <div class="stepwizard-step">
-        <span class="step">3</span>
-        </div>
-        <div class="stepwizard-step">
-        <span class="step">4</span>
-        </div>
-        <div class="stepwizard-step">
-        <span class="step">5</span>
-        </div>
-      </div>
-  </div>
-</div>
 
 <div class="clearfix"></div>
+<div class="row cotizaBox">
+<div class="col-md-4 text-center">
+  <h2>COTIZA AQUÍ</h2>
+<p>Ahorra hasta 30% en tu envío</p></div>
 
-<form id="regForm" class="effect5" action="https://guiapaqueteria.com/us/resultados-de-cotizacion/" autocomplete="off">
+<div class="col-md-8">
+<form id="regForm" action="https://guiapaqueteria.com/us/resultados-de-cotizacion/" autocomplete="off">
 
   <div class="clearfix"></div>
 
-  <div class="col-md-12">
+  <div class="col-xs-12 col-sm-12 col-lg-12">
   <!-- One "tab" for each step in the form: -->
-    <div class="tab"><h3>Selecciona tu tipo de Envío</h3>
+    <div class="tab">
       <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <div class="form-group sendPaq">
-            <input type='radio' name='doc_or_package' value='Package' id="paq"/>
-              <label for="paq"></label> 
-                <h6>Paquete <a href="#" type="button" data-toggle="modal" data-target=".info-paquete"><div class="stepwizard-step"><span class="step active"><b>i</b></span></div></a></h6>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <div class="form-group sendDoc">
-             <input type="radio" name="doc_or_package" value="Document" id="doc"/>
-             <label for="doc"></label> 
-             <h6>Documento</h6>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h3>Selecciona tu tipo de Envío</h3>
+          <div class="checkbox text-center  ">
+              <label for="paq"> 
+                <input type='radio' name='doc_or_package' value='Package' id="paq"/>
+                Paquete
+              </label> 
+           
+             <label for="doc"> 
+                <input type="radio" name="doc_or_package" value="Document" id="doc"/>
+                Documento
+             </label> 
+            
           </div>
         </div>
        
       </div>
     </div>
 
-    <div class="tab"><h3>Tu envío es:</h3>
+    <div class="tab">
+      <h3>Tu envío es:</h3>
  
-      <div class="checkbox">
+      <div class="checkbox text-center">
      
-          <input name="q_envio_nacional" class="seguroIn" type="radio" id="q_envio_nacional" value="option1" checked="checked"> &nbsp;Nacional</label>
+          <label>
+            <input name="q_envio_nacional" class="seguroIn" type="radio" id="q_envio_nacional" value="option1" checked="checked"> &nbsp;Nacional</label>
           <label>
           <input name="q_envio_nacional" class="seguroIn" type="radio" id="q_envio_internacional" value="option2">  &nbsp;Internacional 
         </label>
       </div>
     </div>
 
-    <div class="tab"><h3>¿Hacia dónde lo envías?</h3>
+    <div class="tab">
+      <h3>¿Hacia dónde lo envías?</h3>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="country_origen_block">
           <div class="form-group"> 
             <label for="">ORIGEN (Desde)</label>
               <select name="country_origen" id="country_origen" class="form-control">
                 <?php include 'inc/cotizador/international-codes-select-list.php';?>
               </select>
-            <br>
-            <input class="form-control input-lg autocompletar_from" id="from_keyword_se" placeholder="Código Postal" type="text" autocomplete="noauto-origen" autofill="off" name="ciudad_origen">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+              <label for="">ORIGEN (C.P.)</label>
+             <input class="form-control input-lg autocompletar_from" id="from_keyword_se" placeholder="Código Postal" type="text" autocomplete="noauto-origen" autofill="off" name="ciudad_origen">
             <input type="hidden" value="" class="input-lg" name="from_keyword_id_se" id="from_keyword_id_se" />
           </div>
         </div>
-        <div class="col-md-12">
-          <div class="form-group">
+
+
+
+             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="country_destino_block">
+          <div class="form-group"> 
             <label for="">DESTINO (Hacia)</label>
               <select name="country_destino" id="country_destino" class="form-control">
                 <?php include 'inc/cotizador/international-codes-select-list.php';?>
               </select>
-            <br>
-            <input class="form-control input-lg autocompletar_to" id="to_keyword_se" placeholder="Código Postal" type="text" autocomplete="new-password"  name="ciudad_destino">
-            <input type="hidden" value="" class="input-lg" name="to_keyword_id_se" id="to_keyword_id_se" />
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+              <label for="">DESTINO (C.P.)</label>
+              <input class="form-control input-lg autocompletar_to" id="to_keyword_se" placeholder="Código Postal" type="text" autocomplete="new-password"  name="ciudad_destino">
+              <input type="hidden" value="" class="input-lg" name="to_keyword_id_se" id="to_keyword_id_se" />
           </div>
         </div>
-        <div class="col-md-12">
-              <p>¿No conoces el Código Postal?  <a href="https://guiapaqueteria.com/buscador-de-codigos-postales/" target="_blank"><b>Buscalo Aquí</b></a></p>
-        </div>  
-      </div>
-    </div>
+
+
+
+
+
+
+      </div><!--row-->
+       </div> <!--tab-->
+       
+    
 
     <div class="tab tab_paqueteria"><h3 class="tab_paq_title">Introduce las medidas</h3>
       <div class="row sub_tab_paqueteria">
@@ -132,7 +134,7 @@
         </div>
       <?php else: ?>
       <div class="package_container">
-      <div class="col-xs-4 col-md-2" id="">
+      <div class="col-xs-4 col-md-4" id="">
         <div class="form-group">
           <label for="">No. de <small>Paquetes</small> </label>
           <input class="form-control input-lg input_paqueteria"  placeholder="" id="number_packages" name="number_packages[]" value="1" type="number">
@@ -169,10 +171,10 @@
           </div>
         </div>
       </div>
-<div class="clearfix"></div><hr><div class="clearfix"></div>
+<!--<div class="clearfix"></div><hr class="my"><div class="clearfix"></div>-->
     </div>
     </div>
- <h6 class="agregar_div"><a href="" class="clone-link" onclick="return false;"><b>Agregar otro paquete</b></a>  <a href="#" type="button" data-toggle="modal" data-target=".maspaquetes"><div class="stepwizard-step"><span class="step"><b>?</b></span></div></a></h6>
+ <h6 class="agregar_div"><a href="" class="clone-link" onclick="return false;"><b class="blanco">Agregar otro paquete</b></a>  <!--<a href="#" type="button" data-toggle="modal" data-target=".maspaquetes"><div class="stepwizard-step"><span class="step"><b>?</b></span></div></a>--></h6>
  
       
       <?php endif; ?>
@@ -217,14 +219,34 @@
     </div>
   </div>
 
+
   <div class="clearfix"></div>
 
 </form> 
-
-<br>
-
+<div class="col-md-12 text-center">   
+  <div class="stepwizard">
+      <div class="stepwizard-row setup-panel">
+        <div class="stepwizard-step">
+        <span class="step">1</span>
+        </div>
+        <div class="stepwizard-step">
+        <span class="step">2</span>
+        </div>
+        <div class="stepwizard-step">
+        <span class="step">3</span>
+        </div>
+        <div class="stepwizard-step">
+        <span class="step">4</span>
+        </div>
+        <div class="stepwizard-step">
+        <span class="step">5</span>
+        </div>
+      </div>
+  </div>
+</div>
 <!--<p class="text-center blanco small mb5">¿Envías más de un paquete a la misma dirección? <a href="https://envios.guiapaqueteria.com/"><b>Haz Click Aquí</b></a></p>-->
- 
+ </div>
+</div>
 <div class="clearfix"></div>
 
  <?php

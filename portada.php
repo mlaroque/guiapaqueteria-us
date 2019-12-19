@@ -44,34 +44,13 @@
         
   <?php if(!$amp_param):?>
 
-<!--::::::::::::: COTIZADOR ::::::::::::::-->        
-<div class="clearfix"></div>
-<div class="container-fluid BGcoti">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3"></div>
 
-          <div class="col-md-6">
-          <?php include("cotizador.php"); ?>
-          </div>
+<div class="container">
+    <?php include("cotizador.php"); ?>
+</div>
+        
 
-      <div class="col-md-3"></div>
-    </div>
-
-
-     <div class="row hpTop">
-          <div class="col-md-12 text-center">
-              <h1 class="blanco">Envíos de Paquetes y Documentos <span class="hidden-xs">desde Estados Unidos</span></h1>
-              <h2 class="blanco">Hasta <b class="blanco">50% de Ahorro</b> en tu Envío</h2><br>
-           </div>
-
-    </div>
-
-
-  </div>
-</div>    
-<div class="clearfix"></div>
-<!--::::::::::::: COTIZADOR ::::::::::::::-->      
+     
                   <?php endif; ?>     
      
 

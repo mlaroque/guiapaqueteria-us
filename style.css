@@ -31,7 +31,7 @@ img.logo-xs { margin: 0}
 a, a:visited {color: #00bcd4}
 a:hover, a:focus {color: #b0d400}
 
-#country_destino, #country_origen { font-size:18px; line-height:46px; height: auto !important; padding:10px 16px; border:2px solid #00bcd4}
+#country_destino, #country_origen { font-size:18px; line-height:46px; height: auto !important; padding:6opx 16px; border:2px solid #00bcd4}
 
 .BGgrisC { background-color: #f4f6f8}
 .BGcoti {background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/bg-orange.png);
@@ -348,8 +348,9 @@ ol ol{margin: 0 0 0 2em; /* Add some left margin for inner lists */}
 .rounded-list span:before{content: counter(li);counter-increment: li;position: absolute;left: -1.3em;top: 50%;margin-top: -1.3em;background: #ffb934;height: 2.5em;width: 2.5em;line-height: 2em;border: .3em solid #fff;text-align: center;font-weight: normal;border-radius: 2em;transition: all .3s ease-out;color: white;text-shadow: unset}
 
 /******************************* FORMULARIO DE COTIZACION **************************************/
-.stepwizard-row { display: table-row; }
-.stepwizard { display: table; width: 100%; position: relative; margin-bottom: 10px; }
+.cotizaBox {margin-top: 20px}
+.stepwizard-row { display: table-row;  }
+.stepwizard { display: table; width: 100%; position: relative; margin-top: 10px; }
 .stepwizard-step p { margin-top: 0px; font-size: 12px; color: #fff; }
 .stepwizard-step button[disabled] { opacity: 1 !important; filter: alpha(opacity=100) !important; }
 .stepwizard-row:before { top: 14px; bottom: 0; position: absolute; content: " "; width: 100%; height: 1px; background-color: #ccc; z-order: 0; }
@@ -357,20 +358,13 @@ ol ol{margin: 0 0 0 2em; /* Add some left margin for inner lists */}
 .step { width: 24px; height: 24px; padding: 0; border-radius: 50%; background: white; display: inline-block; color: #ccc; font-weight: 600; border: 2px solid #ccc; line-height: 20px }
 .step.active { opacity: 1; background-color: #00bcd4; color: #fff;   border: 2px solid #00bcd4; }
 .step.finish { background-color: #00bcd4; border: 2px solid #fff; color: #fff; } 
-#regForm { margin: 0; background:white; border-radius: 4px; padding: 10px;   /*box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */}
+#regForm { margin: 0; background:url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/bg-orange.png); border-radius: 4px; padding: 10px;   /*box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */}
 #regForm p { font-weight: 200}
-#regForm h3{ padding: 0 0 10px 0; margin: 0 0 20px 0; text-align: center; font-weight: 200; font-size: 22px; border-bottom: 1px solid #ddd}
-#regForm label{   font-weight: 200; font-size: 16px; line-height: 16px}
+#regForm h3{ padding-bottom: 5px; margin: 0 auto 10px auto; border-bottom:1px solid #fff; text-align: center; font-weight: 200; font-size: 22px; color: #fff }
+#regForm label{   font-weight: 200; font-size: 16px; line-height: 16px; color: #fff}
 #regForm h6{   font-weight: 200; text-align: center; font-size: 16px}
 .regBtn {margin: 10px 0; text-align: center; padding: 0}
-.sendPaq input[type=radio] { display:none; }
-.sendPaq input[type=radio] + label { background: url(images/paq_off.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
-.sendPaq input[type=radio]:checked + label { background: url(images/paq.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
-.sendDoc input[type=radio] { display:none; }
-.sendDoc input[type=radio] + label { background: url(images/doc_off.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
-.sendDoc input[type=radio]:checked + label { background: url(images/doc.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
-.seguroIn  { float: left; display: block; width: auto}
-input { padding: 10px; width: 100%; font-size: 17px; border: 1px solid #aaaaaa; }
+/*input { padding: 10px; width: 100%; font-size: 17px; border: 1px solid #aaaaaa; }*/
 input.invalid { background-color: #ffdddd; border: 1px solid #ff0000; }
 .tab { display: none; }
 .effect5 { position: relative; }
@@ -466,3 +460,39 @@ ul.twoColist { list-style-type: none; margin: 0; padding: 0; }
 .paqEstado ul, .paqEstado li {list-style-type: none;}
 .paqEstado li a, .paqEstado li a:visited { color: #00a4ba; font-weight: 600 }
 .paqEstado li a:hover,.paqEstado li a:focus {color: #98ac33; text-decoration: none}
+
+.indice-B {border-radius:4px; border:1px solid #e0e3ed; background: #f2f5ff; border: 1px solid #e0e3ed; }
+.indice-B ol { }
+.indice-B p {margin: 10px auto; text-align: center; border-bottom: 1px dashed #ddd}
+.indice-B li { padding: 3px 0; margin: 5px 0; }
+.indice-B a, .indice-B a:visited {color: #00bcd4}
+.indice-B a:hover, .indice-B a:focus {color: #666}
+table {width:100%; border-collapse: collapse; margin: 20px 0}
+table th, table td { padding: 10px; width: auto;}   
+tbody td {display: table-cell;  text-align:left; font-size: 14px; line-height: 16px; color: #5c6176;}
+th { color: #fff; background: #ff9507; font-weight:700; text-align:center; text-transform: uppercase; }
+table tbody tr:nth-of-type(2n+1) { background: #f2f5ff; }
+.tabTit { padding: 3px 0 0 0; color: #9c9a9a; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; line-height: normal; margin: 0 auto 0 auto; font-weight: 500; }
+td { color: #4c5166; line-height: normal; padding: 5px; margin: 0; font-size: 17px; font-weight: bold; letter-spacing: normal; }
+/* RESPONSIVE TABLE */
+@media screen and (max-width: 678px) {
+table {width:100%;}
+thead {display: none;}
+tbody td {display: block;  text-align:left;}
+}
+
+.btn-azulOut, .btn-azulOut:visited { border: 2px solid #00bcd4;  color: #00bcd4; font-weight: bold; font-size: 18px;  margin: 10px; padding: 10px 15px; border-radius: 4px}
+.btn-azulOut:hover, .btn-azulOut:focus { background: #00bcd4;  color: #fff; font-weight: bold; }
+.btn-verdeOut, .btn-verdeOut:visited { border: 2px solid #b1cd52;  color: #b1cd52; font-weight: bold; font-size: 18px;  margin: 10px; padding: 10px 15px; border-radius: 4px}
+.btn-verdeOut:hover, .btn-verdeOut:focus { background: #b1cd52;  color: #fff; font-weight: bold; }
+.btn-naranjaOut, .btn-naranjaOut:visited { border: 2px solid #ff9507;  color: #ff9507; font-weight: bold; font-size: 18px;  margin: 10px; padding: 10px 15px; border-radius: 4px}
+.btn-naranjaOut:hover, .btn-naranjaOut:focus { background: #ff9507;  color: #fff; font-weight: bold; }
+
+  .cta1min { color: #fff; margin: 20px auto; padding:10px; border-radius: 5px }
+  .cta1min p { font-size: 36px; line-height: normal; color: #fff; margin: 0 }
+  .btn-cta1min, .cta1min:visited {background: #fff; color: #ff9507; border: 3px solid #df7510; font-weight: 700; font-size: 30px}
+@media (max-width:575px){
+ .cta1min p { font-size: 23px; line-height: 29px}
+ .midmid {font-size: 20px}
+ .btn-mt10xs {margin-top: 10px}
+}

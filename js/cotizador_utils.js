@@ -148,11 +148,11 @@ function showTab(n) {
 
     if(n == 2){
          if(document.getElementById("q_envio_nacional").checked){
-            jQuery("#country_origen").hide();
-            jQuery("#country_destino").hide();
+            jQuery("#country_origen_block").hide();
+            jQuery("#country_destino_block").hide();
         }else{
-            jQuery("#country_origen").show();
-            jQuery("#country_destino").show();
+            jQuery("#country_origen_block").show();
+            jQuery("#country_destino_block").show();
         }     
     }
 
