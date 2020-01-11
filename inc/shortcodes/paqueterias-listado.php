@@ -1,37 +1,11 @@
-<?php
-/**
- * Template Name: Template Paqueterias
- */
- 
-?>
-
-<?php get_header(); ?>
-			
-	
-
-<div class="container">
-	<div class="row">
-		<div id="primary" class="content-area col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<main id="main" class="site-main" role="main">
-
-						<header>
-							
-						 <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1> sdaasd
+ <?php 
+						global $post;
+						global $servicio;
 						
-						</header> <!-- end article header -->
-
-						<?php 
-
-						get_template_part('includes/template','paqueterias-filtros');
-						
-						the_content();
-
-						
-						
-								//Establecer conexión con la base de datos
+						//Establecer conexión con la base de datos
 						global $conn_host, $conn_port, $conn_user, $conn_pass, $conn_db;
 						$host = "localhost";
-						$db = "guiapaqu_us_db";
+						$db = "guiapaqu_db";
 						$user = "guiapaqu_user";
 						$pwd = "gasherbrum-8000!";
 		
@@ -44,9 +18,9 @@
 						}
 						
 							$args = array(
-								'post_type' => 'paqueteria',
+								'post_type' => 'empresas',
 								'post_parent' => 0,
-								'cat' => '-1176',
+								'tag' => $servicio,
 								'posts_per_page' => -1,
 								'nopaging' => true,
 								'orderby' => 'menu_order',
@@ -99,55 +73,44 @@
 
 								$post_tags = get_the_tags($post->ID);
 								$tags_str = "";
-								foreach($post_tags as $post_tag){
-									if(strpos($post_tag->slug,"servicio") !== false){
-										$tags_str .= $post_tag->slug . ",";
-									}
-								}
 
-								$tags_str = rtrim($tags_str, ",");
+								if ( !empty($post_tags) ){
+									foreach($post_tags as $post_tag){
+										if(strpos($post_tag->slug,"servicio") !== false){
+											$tags_str .= $post_tag->slug . ",";
+										}
+									}
+							
+									$tags_str = rtrim($tags_str, ",");
+								}
 						?>
 						
- <div id="<?php echo $post->post_name; ?>" class="col-md-12 result-div" data-servicios="<?php echo $tags_str; ?>" style="float:left">
+ <div id="<?php echo $post->post_name; ?>" class="col-xs-12 col-sm-4 col-md-3 col-lg-3 result-div" data-servicios="<?php echo $tags_str; ?>" style="float:left">
 
-<div class="ListEmpresa">
+	<div class="LEmpresas">
 			
-<a href="<?php echo esc_url( get_permalink() ); ?>">
-	<div class="boxcon">
-		
-<div class="col-xs-1 visible-xs"> </div>
-
-<div class="col-md-3 col-sm-4 col-xs-10 text-center">
-        <img src="<?php the_post_thumbnail_url(); ?>" class="img-circle" alt="<?php the_title(); ?>" width="75%">
-</div>
-<div class="visible-xs col-md-12"><p><br></p></div>
-<div class="col-md-3 col-sm-8 col-xs-12 pull-right text-center starBoxstar">
-			<?php for ($x = 0; $x < 5; $x++): ?>
-				<i class="fa <?php echo $stars[$x]; ?>" aria-hidden="true"></i>
-			<?php endfor; ?>
-        <h2 class="bigRat text-center"><?php echo $average_brand_stars; ?></h2>
-</div>
-
-<div class="col-md-6 col-sm-12 col-xs-12 pull-left">
-    <p class="smltxt" style="text-align: justify;"><?php echo get_the_excerpt(); ?> <small class="more azul">[Leer más]</small></p>
+		<a href="<?php echo esc_url( get_permalink() ); ?>">
+			<div class="boxcon text-center">
+				<div class="boxconImg">
+					<img src="<?php the_post_thumbnail_url(); ?>" class="img-circle" alt="<?php the_title(); ?>">
+				</div>
+					<div class="LEmpresasname">
+ 							<p class="text-center"><?php the_title(); ?></p>
+ 					</div>
+ 					<div class="text-center starBstar">
+ 						<?php for ($x = 0; $x < 5; $x++): ?>
+							<i class="fa <?php echo $stars[$x]; ?>" aria-hidden="true"></i>
+						<?php endfor; ?>
+					</div>
+			</div>
+		</a>
+	</div>
 </div>
 
-<div class="col-xs-1 visible-xs"> </div>
 
-</div>
-  </a>
-</div>
- 
-
-</div>
  			
-						<?php endwhile;
+<?php endwhile;
 						
-						wp_reset_postdata();
-						?>			
-</div>
-			
-     
-    
-</main></div></div></div>
-<?php get_footer(); ?>
+	wp_reset_postdata();
+?>		
+<div class="clearfix"></div>

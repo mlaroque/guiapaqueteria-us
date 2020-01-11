@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <div class="tab">
+   <!-- <div class="tab">
       <h3>Tu envío es:</h3>
  
       <div class="checkbox text-center">
@@ -46,7 +46,7 @@
           <input name="q_envio_nacional" class="seguroIn" type="radio" id="q_envio_internacional" value="option2">  &nbsp;Internacional 
         </label>
       </div>
-    </div>
+    </div>-->
 
     <div class="tab">
       <h3>¿Hacia dónde lo envías?</h3>
@@ -55,7 +55,9 @@
           <div class="form-group"> 
             <label for="">ORIGEN (Desde)</label>
               <select name="country_origen" id="country_origen" class="form-control">
-                <?php include 'inc/cotizador/international-codes-select-list.php';?>
+                <!--<?php //include 'inc/cotizador/international-codes-select-list.php';?>-->
+                <option value="US">Estados Unidos</option>
+                <option value="MX">México</option>
               </select>
             </div>
           </div>
@@ -73,7 +75,8 @@
           <div class="form-group"> 
             <label for="">DESTINO (Hacia)</label>
               <select name="country_destino" id="country_destino" class="form-control">
-                <?php include 'inc/cotizador/international-codes-select-list.php';?>
+                <!--<?php //include 'inc/cotizador/international-codes-select-list.php';?>-->
+                <option value="MX">México</option>
               </select>
             </div>
           </div>
@@ -237,9 +240,6 @@
         </div>
         <div class="stepwizard-step">
         <span class="step">4</span>
-        </div>
-        <div class="stepwizard-step">
-        <span class="step">5</span>
         </div>
       </div>
   </div>

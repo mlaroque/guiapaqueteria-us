@@ -496,3 +496,18 @@ tbody td {display: block;  text-align:left;}
  .midmid {font-size: 20px}
  .btn-mt10xs {margin-top: 10px}
 }
+.logoEmp img {border-radius: 50%;}
+
+/******************************* LISTADO EMPRESAS *************************************/
+.LEmpresas { margin: 10px 0;box-shadow:0 .125rem .25rem rgba(0,0,0,.075) ; float: left; width: 100%}
+.LEmpresas a { display: block}
+.LEmpresas img { max-height: 107px; margin: 10px 10px 0 10px; } 
+.LEmpresas p { font-size: 14px; font-weight: 200; line-height: normal; color: #6d6b7d}
+.LEmpresas .boxcon:hover {box-shadow:0 .125rem .25rem rgba(0,0,0,.2);  background: #f9fbfd}
+.LEmpresas a:hover {text-decoration: none}
+.starBstar { color: #ffb934 !important; font-size: 20px; padding: 5px}
+.LEmpresasname { min-height: 50px; line-height: normal; }
+.LEmpresasname p {text-align: center; margin: 0 10px; line-height: 16px}
+.boxconImg { min-height: 130px;}
+
+

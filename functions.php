@@ -261,19 +261,6 @@ function create_post_type() {
         )  
     );
 
-    register_post_type( 'empresas',  
-        array(  
-            'labels' => array(  
-                'name' => __( 'Empresas' ),  
-                'singular_name' => __( 'Empresa' )  
-            ),  
-        'public' => true,  
-        'menu_position' => 4,
-		'hierarchical' => true,		
-        'taxonomies' => array( 'category', 'post_tag' ),
-		'supports' => array( 'title', 'editor', 'author', 'comments', 'thumbnail', 'excerpt', 'page-attributes')
-        )  
-    );  
 
     register_post_type( 'paqueterias-en',  
         array(  
@@ -300,7 +287,7 @@ function create_post_type() {
 /**************************************/
 
 /* Incluimos los shortcodes del antiguo canvas que nos hacen falta */
-//require_once ( get_template_directory() . '/inc/functions/shortcodes-functions.php' );
+require_once ( get_template_directory() . '/inc/functions/shortcodes-functions.php' );
 
 /**************************************/
 /***********END*****************/

@@ -147,21 +147,6 @@ function showTab(n) {
     }
 
     if(n == 2){
-         if(document.getElementById("q_envio_nacional").checked){
-            jQuery("#country_origen_block").hide();
-            jQuery("#country_destino_block").hide();
-        }else{
-            jQuery("#country_origen_block").show();
-            jQuery("#country_destino_block").show();
-        }     
-    }
-
-    if(n == 2 && jQuery("#from_keyword_se").val() !== "" && jQuery("#to_keyword_se").val() !== ""){
-        document.getElementById("nextBtn").style.display = "inline";
-
-    }
-
-    if(n == 3){
         if(document.getElementById("paq").checked){
             jQuery(".package_container").show();
             jQuery(".document_container").hide();
@@ -175,12 +160,12 @@ function showTab(n) {
         }
     }
 
-    if(n == 3 && jQuery("#package_length").val() != 0 && jQuery("#package_width").val() != 0
+    if(n == 2 && jQuery("#package_length").val() != 0 && jQuery("#package_width").val() != 0
          && jQuery("#package_height").val() != 0 && jQuery("#package_weight").val() != 0 && jQuery("#number_packages").val() != 0){
         document.getElementById("nextBtn").style.display = "inline";
     }
 
-    if(n == 4){
+    if(n == 3){
         if(document.getElementById("q_asegurar_no").checked){
             document.getElementById("nextBtn").style.display = "inline";
             jQuery("#valor_asegurado").hide();
@@ -281,6 +266,16 @@ jQuery("#country_origen").change(function(){
 
   jQuery("#from_keyword_se").val("");
   jQuery("#from_keyword_id_se").val("");
+
+  var selected_country = jQuery(this).val();
+  if(selected_country === "MX"){
+      $options_str = '<option value="US">Estados Unidos</option>';
+      $options_str += '<option value="MX">México</option>';
+  }else{
+      $options_str = '<option value="MX">México</option>';
+  }
+
+  jQuery("#country_destino").html($options_str);
 });
 
 jQuery("#country_destino").change(function(){

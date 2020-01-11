@@ -14,18 +14,17 @@ get_header();
 					 <h1 class="text-left upper"><?php the_post_thumbnail('medium'); ?> <?php echo $post->post_title; ?></h1>
 					</div>
 
+					<div class="clearfix"></div>
+
 
 
 					<?php
 					the_content();
 					?>
-
-					<?php if($post->post_parent > 0): ?>
-
-						<?php get_template_part("inc/sucursales/sucursales","detalles"); ?>
-						<?php get_template_part("inc/sucursales/sucursales","listado"); ?>
-					<?php endif; ?>
+					<?php echo do_shortcode('[resultados_sucursales ciudad="miami"]'); ?>
 					
+					<h2 class="text-center">Paqueterías en otras ciudades</h2>
+					<?php get_template_part("inc/shortcodes/paqueterias-en-listado"); ?>
 			</main> 
 		</div> 
 	</div> 	

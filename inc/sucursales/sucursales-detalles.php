@@ -100,10 +100,6 @@ foreach ($conn->query($sql) as $row) {
 
 		<?php endforeach; ?>
 
-		<h2 class="text-center">Otras Sucursales</h2>
-		<?php //get_template_part("inc/shortcodes/listado","sucursales"); ?>
-
-
 	</main>
 
 </div>
