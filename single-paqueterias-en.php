@@ -3,6 +3,7 @@
  * The template for displaying all single posts
  */
 get_header();
+global $post;
  ?>
 
 <div class="container">
@@ -21,7 +22,7 @@ get_header();
 					<?php
 					the_content();
 					?>
-					<?php echo do_shortcode('[resultados_sucursales ciudad="miami"]'); ?>
+					<?php echo do_shortcode('[resultados_sucursales ciudad="'.str_replace("-"," ",$post->post_name).'"]'); ?>
 					
 					<h2 class="text-center">Paqueterías en otras ciudades</h2>
 					<?php get_template_part("inc/shortcodes/paqueterias-en-listado"); ?>

@@ -5,7 +5,7 @@
 			'post_type' => 'paqueterias-en',
 			'posts_per_page' => -1,
 			'orderby' => 'title',
-			'post_status' => 'draft',
+			'post_status' => 'publish',
 			'order' => 'ASC'
 			); 
 

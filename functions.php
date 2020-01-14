@@ -197,6 +197,8 @@ if ( function_exists( 'add_image_size' ) )
 
 
 
+
+
 //paginazione
 function custom_pagination() {
     global $wp_query;

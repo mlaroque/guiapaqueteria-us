@@ -1,13 +1,3 @@
-
-
-
-<div class="clearfix"></div>
-<div class="row cotizaBox">
-<div class="col-md-4 text-center">
-  <h2>COTIZA AQUÍ</h2>
-<p>Ahorra hasta 30% en tu envío</p></div>
-
-<div class="col-md-8">
 <form id="regForm" action="https://guiapaqueteria.com/us/resultados-de-cotizacion/" autocomplete="off">
 
   <div class="clearfix"></div>
@@ -245,9 +235,7 @@
   </div>
 </div>
 <!--<p class="text-center blanco small mb5">¿Envías más de un paquete a la misma dirección? <a href="https://envios.guiapaqueteria.com/"><b>Haz Click Aquí</b></a></p>-->
- </div>
-</div>
-<div class="clearfix"></div>
+ 
 
  <?php
 

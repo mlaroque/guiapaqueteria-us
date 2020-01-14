@@ -11,6 +11,7 @@
 
 
 
+
 			<div id="content" class="clearfix">
 				<div id="main" class="clearfix hp" role="main">
 
@@ -44,19 +45,41 @@
         
   <?php if(!$amp_param):?>
 
-
+<div class="container-fluid bgOrform">
 <div class="container">
-    <?php include("cotizador.php"); ?>
-</div>
-        
+  <div class="clearfix"></div>
+  <div class="row hpTop">
+          <div class="col-md-12 text-center">
+              <h1 class="blanco">Cotiza tu envío</span></h1>
+    </div>
 
-     
+  <div class="row cotizaBox">
+    <div class="col-xs-12 col-sm-1 col-md-2 col-lg-2 text-center">
+  </div>
+    <div class="col-md-8">
+      <?php include("cotizador.php"); ?>
+        
+      </div>
+          <div class="col-xs-12 col-sm-1 col-md-2 col-lg-2 text-center">
+      </div>
+    </div>
+    <div class="row hpTop">
+          <div class="col-md-12 text-center">
+              <h2 class="blanco">Ahorra hasta 30%</b> en tu envío</h2>
+              <h2 class="blanco">Envíos desde USA</h2>
+           </div>
+         </div>
+
+</div>
+<div class="clearfix"></div>
+   </div>  </div>
                   <?php endif; ?>     
      
 
 <!--:::::::::::::::::::::: LOGOS ::::::::::::::::::::--> 
-<!--<div class="container">
-<div class="row tb60mar">
+ <div class="container">
+
+  <div class="row tb60mar">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
       <h2>Realiza tus envíos con las mejores Empresas</h2>  
       </div>
@@ -66,28 +89,28 @@
      </div>
 
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-           <a href="https://guiapaqueteria.com/paqueteria/ups/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/hp-ups.png" class="img-responsive" /></a>
+           <a href="https://guiapaqueteria.com/paqueteria/redpack/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-redpack.png" class="img-responsive"></a>
       </div>
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-           <a href="https://guiapaqueteria.com/paqueteria/fedex/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/hp-fedex.png" class="img-responsive" /></a>
+           <a href="https://guiapaqueteria.com/paqueteria/ups/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-ups.png" class="img-responsive"></a>
       </div>
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-
+           <a href="https://guiapaqueteria.com/paqueteria/fedex/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-fedex.png" class="img-responsive"></a>
       </div>
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-
+           <a href="https://guiapaqueteria.com/paqueteria/estafeta/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-estafeta.png" class="img-responsive"></a>
       </div>
-    
+     <!-- <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
+            <a href="https://guiapaqueteria.com/paqueteria/dhl/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-dhl.png" class="img-responsive" /></a>
+      </div>-->
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-
+          <img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-99minutos.png" class="img-responsive">
       </div>
        <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 text-center">
      </div>
 </div>
-</div>-->
-  
 
-
+</div>
 
  <!--::::::::::::::::::::::STEP COTIZACION ::::::::::::::::::::-->
 <div class="container-fluid tb60mar tb20pad BGgrisC">
@@ -256,7 +279,7 @@
 </div>
 </div>
 
-<!--
+ 
 <div class="container-fluid hp3reasons faq">
 <div class="container">
  
@@ -530,7 +553,7 @@ Problemas generales
     </div>
   </div>
 </div>
--->
+ 
 </div></div></div>
 
 

@@ -104,11 +104,11 @@ if($country_origen !== "MX" || $country_destino !== "MX"){
 
  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left pull-left">
        <h3 class="marPad0 upper"><b>Beneficios</b></h3><br>
- <p><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/check.png" class="pull-left" width="20">  &nbsp;Tarifas preferenciales en servicios seleccionados.</p>
-<p><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/check.png" class="pull-left" width="20">  &nbsp;Libreta de direcciones frecuentes.</p>
-<p><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/check.png" class="pull-left" width="20">  &nbsp;Monedero de prepago.</p>
-<p><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/check.png" class="pull-left" width="20">  &nbsp;Soluciones para negocios o empresas.</p>
-<p><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/check.png" class="pull-left" width="20">  &nbsp;Descuentos extras por envíos a volumen.</p>
+ <p><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/img/check.png" class="pull-left" width="20">  &nbsp;Tarifas preferenciales en servicios seleccionados.</p>
+<p><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/img/check.png" class="pull-left" width="20">  &nbsp;Libreta de direcciones frecuentes.</p>
+<p><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/img/check.png" class="pull-left" width="20">  &nbsp;Monedero de prepago.</p>
+<p><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/img/check.png" class="pull-left" width="20">  &nbsp;Soluciones para negocios o empresas.</p>
+<p><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/img/check.png" class="pull-left" width="20">  &nbsp;Descuentos extras por envíos a volumen.</p>
 </div>
 <div class="clearfix"></div>
 		<p class="text-center marPad0"><small>*El registro es rápido y gratuito</small></p>
