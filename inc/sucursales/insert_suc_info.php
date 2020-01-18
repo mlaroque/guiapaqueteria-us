@@ -6,7 +6,7 @@
 		$params['url'] = "";
 		$params['method'] = 'GET';
 
-		$query = 'SELECT * FROM LCMN_SUCURSALES_DIR';
+		$query = 'SELECT * FROM LCMN_SUCURSALES_DIR WHERE POST_ID IN (257,268)';
 
 		foreach($conn->query($query) as $row) {
         	
@@ -124,6 +124,7 @@
 					echo  "success";
 				}else{
 					echo "insert failed";
+					print_r($stmt->errorInfo());
 				}
 
 			}
