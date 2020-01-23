@@ -276,7 +276,20 @@ function create_post_type() {
         'taxonomies' => array( 'category', 'post_tag' ),
 		'supports' => array( 'title', 'editor', 'author', 'comments', 'thumbnail', 'excerpt', 'page-attributes')
         )  
-    );
+	);
+	
+	register_post_type( 'guias',  
+	array(  
+		'labels' => array(  
+			'name' => __( 'Guias' ),  
+			'singular_name' => __( 'Guia' )  
+		),  
+	'public' => true,  
+	'menu_position' => 6,  
+	'taxonomies' => array( 'category', 'post_tag' ),
+	'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
+	)  
+);
 	
 } 
 
