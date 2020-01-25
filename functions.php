@@ -277,6 +277,20 @@ function create_post_type() {
 		'supports' => array( 'title', 'editor', 'author', 'comments', 'thumbnail', 'excerpt', 'page-attributes')
         )  
 	);
+
+	register_post_type( 'envios',  
+	array(  
+		'labels' => array(  
+			'name' => __( 'Rutas' ),  
+			'singular_name' => __( 'Ruta' )  
+		),  
+	'public' => true,  
+	'menu_position' => 6,  
+	'hierarchical' => true,
+	'taxonomies' => array( 'category', 'post_tag' ),
+	'supports' => array( 'title', 'editor', 'author', 'comments', 'thumbnail', 'excerpt', 'page-attributes')
+	) 
+	);
 	
 	register_post_type( 'guias',  
 	array(  
@@ -285,7 +299,7 @@ function create_post_type() {
 			'singular_name' => __( 'Guia' )  
 		),  
 	'public' => true,  
-	'menu_position' => 6,  
+	'menu_position' => 7,  
 	'taxonomies' => array( 'category', 'post_tag' ),
 	'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
 	)  
