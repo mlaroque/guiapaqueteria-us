@@ -48,4 +48,24 @@ function listado_paqueterias( $content){
     return $content;
 }
 
+//Listado de paqueterias
+add_shortcode( 'tabla_envios', 'tabla_envios');
+
+function tabla_envios( $atts, $content = null){
+
+        $a = shortcode_atts( array(
+            'tipo' => '',
+            'lineas' => 4
+        ), $atts );
+
+        $GLOBALS['tipo_tabla'] = $a['tipo'];
+        $GLOBALS['num_lineas'] = $a['lineas'];
+
+    ob_start();
+    get_template_part("inc/shortcodes/envios","tabla-precios");
+    $content .= ob_get_clean();
+        
+    return $content;
+}
+
 ?>
