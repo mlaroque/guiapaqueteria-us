@@ -90,68 +90,69 @@ add_action( 'after_setup_theme', 'lacomuna_theme_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function lacomuna_theme_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'lacomuna-theme' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'lacomuna-theme' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );  register_sidebar( array(
-		'name'          => esc_html__( 'Footer-1', 'lacomuna-theme' ),
-		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Add widgets here.', 'lacomuna-theme' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-     register_sidebar( array(
-		'name'          => esc_html__( 'Footer-2', 'lacomuna-theme' ),
-		'id'            => 'footer-2',
-		'description'   => esc_html__( 'Add widgets here.', 'lacomuna-theme' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-     register_sidebar( array(
-		'name'          => esc_html__( 'Footer-3', 'lacomuna-theme' ),
-		'id'            => 'footer-3',
-		'description'   => esc_html__( 'Add widgets here.', 'lacomuna-theme' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
- register_sidebar( array(
-		'name'          => esc_html__( 'Footer-4', 'lacomuna-theme' ),
-		'id'            => 'footer-4',
-		'description'   => esc_html__( 'Add widgets here.', 'lacomuna-theme' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-  register_sidebar( array(
-		'name'          => esc_html__( 'Footer Horizontal', 'lacomuna-theme' ),
-		'id'            => 'footer-horizontal',
-		'description'   => esc_html__( 'Add widgets here.', 'lacomuna-theme' ),
-		'before_widget' => '<section id="%1$s" class="footH widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-  register_sidebar( array(
-		'name'          => esc_html__( 'Copyright', 'lacomuna-theme' ),
-		'id'            => 'copyright',
-		'description'   => esc_html__( 'Add widgets here.', 'lacomuna-theme' ),
-		'before_widget' => '<section id="%1$s" class="copyright widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+ 
+  register_sidebar(array(
+    'id' => 'footer01',
+    'name' => 'Footer 01',
+    'before_widget' => '<div id="%1$s" class="widget footer-widget col-xs-12 col-sm-3 col-md-3 col-lg-3 %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widgettitle">',
+    'after_title' => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'id' => 'footer02',
+    'name' => 'Footer 02',
+    'before_widget' => '<div id="%1$s" class="widget footer-widget col-xs-12 col-sm-3 col-md-3 col-lg-3 %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widgettitle">',
+    'after_title' => '</h2>',
+  ));
+
+ register_sidebar(array(
+    'id' => 'footer03',
+    'name' => 'Footer 03',
+    'before_widget' => '<div id="%1$s" class="widget footer-widget col-xs-12 col-sm-3 col-md-3 col-lg-3 %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widgettitle">',
+    'after_title' => '</h2>',
+  ));
+
+    register_sidebar(array(
+    'id' => 'footer04',
+    'name' => 'Footer 04',
+    'before_widget' => '<div id="%1$s" class="widget footer-widget col-xs-12 col-sm-3 col-md-3 col-lg-3 %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widgettitle">',
+    'after_title' => '</h2>',
+  ));
+    
+  register_sidebar(array(
+    'id' => 'footer05',
+    'name' => 'Footer 5 LeftOne',
+    'before_widget' => '<div id="%1$s" class="widget footer-horizontal col-xs-12 col-sm-8 col-md-8 col-lg-8  %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widgettitle">',
+    'after_title' => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'id' => 'footer06',
+    'name' => 'Footer 6 RightOne',
+    'before_widget' => '<div id="%1$s" class="widget footer-horizontal col-xs-12 col-sm-4 col-md-4 col-lg-4   text-right %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widgettitle">',
+    'after_title' => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'id' => 'footer07',
+    'name' => 'Footer Copy',
+    'before_widget' => '<div id="%1$s" class="widget footer-copy text-center col-xs-12 col-sm-12 col-md-12 col-lg-12  %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widgettitle">',
+    'after_title' => '</h2>',
+  ));
   
 }
 add_action( 'widgets_init', 'lacomuna_theme_widgets_init' );
