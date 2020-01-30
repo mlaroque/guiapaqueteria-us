@@ -9,56 +9,146 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'lacomuna-theme' ); ?></h1>
+	<div class="container">
+	<div class="row">
+		<div class="content-area col-xs-12 col-sm-12 col-md-12 col-lg-12">
+ 
+			<section class="error-404 not-found text-center">
+				<header class="page-header text-center">
+					<h1 class="page-title text-center"><?php esc_html_e( 'Oops! La página que buscaste no se encuentra.', 'lacomuna-theme' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'lacomuna-theme' ); ?></p>
-
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-
-						// Only show the widget if site has multiple categories.
-						if ( lacomuna_theme_categorized_blog() ) :
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'lacomuna-theme' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'lacomuna-theme' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+					<h2 class="text-center"><?php esc_html_e( 'Puedes seguir navegando nuestra web. ', 'lacomuna-theme' ); ?></h2>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
+ 		</div>
+	</div>
+</div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+
+
+<div class="clearfix"></div>
+
+<p><br></p>
+<div class="clearfix"></div>
+
+
+
+<!--:::::::::::::::::::::: INFO UTILES ::::::::::::::::::::-->
+
+<div class="container-fluid BGgrisC">
+<div class="container">
+<div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p><br></p>
+          <h3 class="text-center">Lee sobre Empresas</h3><br>
+          </div>
+<div class="clearfix"></div>
+
+
+<?php
+    //Dichiarazione Loop Personalizzato
+    $args = array(
+        'post_type' => 'empresas',
+        'posts_per_page' => 24,
+        'orderby' => 'menu_order date',
+        'order' => 'ASC'
+    );
+
+    $posts = get_posts($args);
+    $count = 0;
+    
+    //Esecuzione Loop Personalizzato
+
+    foreach($posts as $post_empresas):
+
+      $count = $count + 1;  
+?>
+<div class="col-xs-6 col-sm-2 col-md-1 col-lg-1 emp404">
+	<div class="text-center">
+		<a href="<?php echo esc_url( get_permalink($post_empresas->ID)); ?>">
+ 				<img src="<?php echo get_the_post_thumbnail_url($post_empresas->ID); ?>"  class="img-circle" alt="<?php the_title(); ?>">
+ 		</a>
+	</div>
+</div>
+
+      
+ <?php
+  endforeach;
+?>   
+<div class="clearfix"></div>
+<p><br></p><p><br></p>
+<div class="clearfix"></div>
+
+<p class="text-center"><a class="btn btn-naranja btn-lg" href="https://guiapaqueteria.com/us/empresas-de-paqueteria-mensajeria/">VER TODAS</a></p>
+<p><br></p><p><br></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<!--:::::::::::::::::::::: INFO UTILES ::::::::::::::::::::-->
+
+<div class="container-fluid">
+<div class="container">
+<div class="row twoColist">
+  <p><br></p>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h3 class="text-center">Lee nuestras Guías</h3><br>
+          </div>
+<div class="clearfix"></div>
+
+<ul>
+<?php
+    //Dichiarazione Loop Personalizzato
+    $args = array(
+        'post_type' => 'guias',
+        'posts_per_page' => 12,
+        'orderby' => 'menu_order date',
+        'order' => 'ASC'
+    );
+
+    $posts = get_posts($args);
+    $count = 0;
+    
+    //Esecuzione Loop Personalizzato
+
+    foreach($posts as $post_guias):
+
+      $count = $count + 1;  
+?>
+
+      
+              <li><a href="<?php echo esc_url( get_permalink($post_guias->ID)); ?>">
+              <?php echo $post_guias->post_title; ?>
+              </a></li>
+      
+ <?php
+  endforeach;
+?>   
+</ul>
+<div class="clearfix"></div>
+
+<p><br></p>
+<p><br></p>
+<div class="clearfix"></div>
+
+<p class="text-center"><a class="btn btn-verde btn-lg blanco" href="https://guiapaqueteria.com/us/guias/">LEER TODAS</a></p>
+
+
+<br><br>
+</div>
+</div>
+</div>
+
+
+
 
 <?php
 get_footer();

@@ -216,65 +216,40 @@
           </div>
 <div class="clearfix"></div>
 
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left fastGuid">
-              <a href="https://guiapaqueteria.com/pesar-paquete-tengo-una-bascula/">
-              <div class="cont">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/01-como-medir.png" class="img-responsive" />
-              <h3>Cómo medir y pesar tu envío</h3>
-              <p>¿No cuentas con una báscula en casa? Aquí te damos algunos consejos de como puedes pesar tú envío con materiales que puedes encontrar en casa.</p>
-              </div>
-              </a>
-      </div>
-      
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left fastGuid">
-              <a href="https://guiapaqueteria.com/guia-de-embalaje-paqueteria-y-mensajeria/">
-              <div class="cont">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/02-embalaje.jpg" class="img-responsive" />
-              <h3>Consejos sobre embalaje</h3>
-              <p>La protección de tú envío es lo más importante para asegurar que llegue en buena condiciones. Hemos preparado una guía de embalaje con consejos para casos diversos.</p>
-              </div>
-              </a>
-      </div>
-      
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left fastGuid">
-              <a href="https://guiapaqueteria.com/cuando-asegurar-envio/">
-              <div class="cont">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/03-asegurar.jpg" class="img-responsive" />
-              <h3>Cuando asegurar tu envío</h3>
-              <p>¿Vas a enviar algún objeto de valor o simplemente quieres asegurar tu envío? Encuentra en este artículo consejos y requisitos.</p>
-              </div>
-              </a>
-      </div>
+
+<?php
+    //Dichiarazione Loop Personalizzato
+    $args = array(
+        'post_type' => 'guias',
+        'posts_per_page' => 6,
+        'orderby' => 'menu_order date',
+        'order' => 'ASC'
+    );
+
+    $posts = get_posts($args);
+    $count = 0;
+    
+    //Esecuzione Loop Personalizzato
+
+    foreach($posts as $post_guias):
+
+      $count = $count + 1;  
+?>
 
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left fastGuid">
-              <a href="https://guiapaqueteria.com/puedes-enviar-puedes-enviar-en-paquete-nacional/">
+              <a href="<?php echo esc_url( get_permalink($post_guias->ID)); ?>">
               <div class="cont">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/04-prohibidos.jpg" class="img-responsive" />
-              <h3>Objetos prohibidos</h3>
-              <p>Antes de enviar asegúrate de que tu envío no tienen restricciones. Revisa la lista de artículos que NO puedes enviar con nuestros proveedores.</p>
+              <img src="<?php echo get_the_post_thumbnail_url($post_guias->ID); ?>" class="img-responsive">
+              <h3><?php echo $post_guias->post_title; ?></h3>
+              <p><?php echo wp_trim_words( $post_guias->post_content, 15, '...' );?></p>
               </div>
               </a>
       </div>
       
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left fastGuid">
-              <a href="https://guiapaqueteria.com/recomendaciones-hacer-envio-a-estados-unidos/">
-              <div class="cont">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/05-eua.jpg" class="img-responsive" />
-              <h3>Recomendaciones para envíos a E.U.A. o Internacionales</h3>
-              <p>Los envíos internacionales deben llenar ciertos requisitos. Aquí te decimos todo lo que debes saber.</p>
-              </div>
-              </a>
-      </div>
-      
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left fastGuid">
-              <a href="https://guiapaqueteria.com/empacarenviar-articulos-especiales/">
-              <div class="cont">
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/images/06-fragiles.jpg" class="img-responsive" />
-              <h3>Envío de Artículos frágiles o especiales</h3>
-              <p>El envío de artículos frágiles requiere de cuidado y protección extra. Aquí algunos consejos para que tu envío no se rompa.</p>
-              </div>
-              </a>
-      </div>
+ <?php
+  endforeach;
+?>   
+
 </div>
 </div>
 </div>

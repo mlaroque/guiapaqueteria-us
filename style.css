@@ -31,7 +31,7 @@ img.logo-xs { margin: 0}
 a, a:visited {color: #00bcd4}
 a:hover, a:focus {color: #b0d400}
 
-#country_destino, #country_origen { font-size:18px; line-height:46px; height: auto !important; padding:6opx 16px; border:2px solid #00bcd4}
+#country_destino, #country_origen { font-size:18px; line-height:46px; height: auto !important; padding:6px 16px; border:2px solid #00bcd4}
 
 .BGgrisC { background-color: #f4f6f8}
 .BGcoti {background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/bg-orange.png);
@@ -83,7 +83,7 @@ text-shadow: none; font-size: 15px; text-transform: uppercase; font-weight: 600;
 .hpTop h1 {font-weight: 600}
 .hpTop h2 { margin: 0}
 .hp5paq { padding: 0}
-.hp5paq h2 { color: #6d6b7d; font-weight: 300; padding: 0; margin-top: 0; margin-bottom: 0px; margin-top: 10px}
+.hp5paq h2 { color: #6d6b7d; font-weight: 300; padding: 0; margin-bottom: 0px; margin-top: 10px}
 .hp5paq h3 { font-weight: 400; margin: 10px 0; letter-spacing: normal}
 .hp5paq h4 { color: #6d6b7d}
 .hp3reasons {padding: 40px 0}
@@ -116,24 +116,24 @@ text-shadow: none; font-size: 15px; text-transform: uppercase; font-weight: 600;
 #mc-embedded-subscribe { border-radius:4px; color: #fff; background-color: #ff6123; border-color: #ff6123}
 #mc-embedded-subscribe:focus, #mc-embedded-subscribe.focus,
 #mc-embedded-subscribe:hover { color: #fff; background-color: #ff4800; border-color: #ff4800}
-input#mce-EMAIL, input#mc-embedded-subscribe { margin: 10px 0; border-radius: 4px}
-
+input#mce-EMAIL { margin: 5px 0; border-radius: 4px; width: 100%; font-size: 17px; border: 1px solid #aaaaaa; padding: 10px}
+input#mc-embedded-subscribe { border:none; padding: 10px; margin: 5px 0; border-radius: 4px; width: 100%; font-size: 17px;  }
 /******************************* FOOTER **************************************/
 .textwidget a, .textwidget li, .textwidget ul a { color: #eff0f1; padding: 0 5px; text-decoration: none}
-.textwidget li a:hover, .textwidget li a:focus { color: #fff; inline; text-decoration: none}
+.textwidget li a:hover, .textwidget li a:focus { color: #fff; text-decoration: none}
 .footer-widget > .textwidget ul { color: #fff; font-size: 14px; font-weight: 200; padding: 0; list-style: none; line-height: 30px}
 .footer-widget > .textwidget li a, .footer-widget > .textwidget li { color: #e2e2e2 !important; text-decoration: none; margin:6px 0}
 .footer-widget > .textwidget li a:hover, .footer-widget > .textwidget li a:focus { color: #fff; text-decoration: none}
-.footSub { background: #646878; padding: 0px; margin: 0}
+.footSub { background: #646878; padding: 30px 0}
 .footSub ul { color: #e2e2e2; font-size: 14px; font-weight: 200; padding: 0; list-style: none; display: inline}
 .footSub .textwidget li a, .footSub li { color: #e2e2e2 !important; padding: 0}
-.footSub li a:hover, .footSub li a:focus { color: #fff; inline; text-decoration: underline}
+.footSub li a:hover, .footSub li a:focus { color: #fff; text-decoration: underline}
 .textwidget.footer-horizontal p { color: #e2e2e2; font-size:14px; padding: 10px 0; margin: 0; font-weight: 200}
 .textwidget.footer-horizontal li a, .textwidget.footer-horizontal li { color: #fcfcfc; display: none; padding: 0 5px}
-.textwidget.footer-horizontal li a:hover, .textwidget.footer-horizontal li a:focus { color: #fff; inline; text-decoration: none}
+.textwidget.footer-horizontal li a:hover, .textwidget.footer-horizontal li a:focus { color: #fff; text-decoration: none}
 .footer-horizontal p { color: #e2e2e2; font-size:14px; padding: 10px 0; margin: 0; font-weight: 200}
-.footer-horizontal li a, .footer-horizontal li { color: #e2e2e2; display: inline; padding: 0 5px; color: #fcfcfc}
-.footer-horizontal li a:hover, .footer-horizontal li a:focus { color: #fff; inline; text-decoration: none}
+.footer-horizontal li a, .footer-horizontal li {  display: inline; padding: 0 5px; color: #fcfcfc}
+.footer-horizontal li a:hover, .footer-horizontal li a:focus { color: #fff; text-decoration: none}
 .footer-copy p { color: #fff; font-size: 12px; padding: 0; margin: 0; font-weight: 200;text-align: center}
 .footer-copy .textwidget a, .footer-copy .textwidget a:visited {color: #fff}
 .footer-copy .textwidget a:hover, .footer-copy .textwidget a:focus {color: #ff4800}
@@ -274,7 +274,7 @@ tbody tr:nth-child(odd) { background: #eee}
 .postListWidg li { font-size: 14px; margin: 10px 0}
 .postListWidg li:last-child { border: none}
 .postListWidg li:before { content: "\f054"; /* FontAwesome Unicode */ font-family: FontAwesome; display: inline-block; margin-left: -1.3em; /* same as padding-left set on li */ width: 1.3em; /* same as padding-left set on li */ padding-right: 10px; color: #fa3c08 !important}
-.postListWidg li a { text-decoration: none; color: #000; display: block; width: 100%; display: inline-flex; -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;  -o-transition: font-size 0.3s ease, background-color 0.3s ease; -ms-transition: font-size 0.3s ease, background-color 0.3s ease; transition: font-size 0.3s ease, background-color 0.3s ease}
+.postListWidg li a { text-decoration: none; color: #000; width: 100%; display: inline-flex; -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;  -o-transition: font-size 0.3s ease, background-color 0.3s ease; -ms-transition: font-size 0.3s ease, background-color 0.3s ease; transition: font-size 0.3s ease, background-color 0.3s ease}
 .postListWidg li a:hover { font-size: 15px; text-decoration: none}
 .mailSml { font-size: 11px !important; text-align: left}
 .porcentBox {border:1px dashed #999; padding: 10px; min-height: 530px}
@@ -317,6 +317,7 @@ table th {text-transform: uppercase;font-size: 14px;letter-spacing: 1px}
 #sidebar1 {margin-top: 20px}
 #sidebar1 .widgettitle {color: #222222;font-weight: 300 !important;text-align: center;text-transform: uppercase}
 .widget ul { list-style-type: none}
+.widget {margin-bottom: 18px}
 .smltxt {font-size: 14px; line-height: normal}
 .i-info { margin: 0 auto 10px auto; font-weight: 600}
 .i-info p { font-size: 15px;  font-weight: 600; margin-bottom: 10px}
@@ -432,8 +433,8 @@ input:focus:-ms-input-placeholder { color:transparent} /* IE 10+ */
 .SUCFilter { font-family: 'Raleway', Arial, sans-serif; text-align: center; text-transform: uppercase; font-weight: 500; letter-spacing: 1px; margin-top:30px;  }
 .SUCFilter {padding: 0;}
 .SUCFilter * { -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: all 0.35s ease; transition: all 0.35s ease; }
-.SUCFilter li { display: inline-block; list-style: outside none none; margin: 2px; font-size: 14px; padding: 0; margin: 3px; border: 1px solid #ddd; border-radius: 4px  }
-.SUCFilter a { padding: 0.3em 0; color: rgba(96, 100, 117, 0.8);  padding: 4px; position: relative; text-decoration: none; display: inline-block; }
+.SUCFilter li { display: inline-block; list-style: outside none none; font-size: 14px; padding: 0; margin: 3px; border: 1px solid #ddd; border-radius: 4px  }
+.SUCFilter a { color: rgba(96, 100, 117, 0.8);  padding: 4px; position: relative; text-decoration: none; display: inline-block; }
 .SUCFilter a:before, .SUCFilter a:after { height: 3px; position: absolute; content: ''; -webkit-transition: all 0.35s ease; transition: all 0.35s ease; background-color: #f09a3e; width: 0; }
 .SUCFilter a:before { top: 0; left: 0; }
 .SUCFilter a:after { bottom: 0; right: 0; }
@@ -448,21 +449,30 @@ ul.SUCmodal a:hover, ul.SUCmodal a:focus {color: #f09a3e; text-decoration: under
 #paq-en-ciudad .modal-content h4 {margin-bottom: 20px; font-size: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
 .sucursalesmasbuscadas {margin:10px 0 60px; float: left;	}
 .twoColist{ margin: 0; float: left; width: 100%; line-height: 20px }
-ul.twoColist { list-style-type: none; margin: 0; padding: 0; }
+ul.twoColist{ list-style-type: none; margin: 0; padding: 0; }
+ul.threeColist { list-style-type: none; margin: 30px 0; padding: 0; display: block; }
 .twoColist li {  list-style-type: none; float: left; font-size: 16px; margin-bottom: 5px  }
+.threeColist li {width: 100%; display: inline-block;}
 .xsList { font-size: 12px; color: #848484; text-transform: uppercase; }
-.twoColist a, .twoColist a:visited { color: #343434 }
-.twoColist a:hover {text-decoration: none; color: #f09a3e}
+.twoColist a, .twoColist a:visited, .threeColist a, .threeColist a:visited { color: #343434 }
+.twoColist a:hover,.twoColist a:focus, .threeColist a:hover, .threeColist a:focus {text-decoration: none; color: #f09a3e}
+
+
 @media (min-width: 768px) {
 .twoColist li { float: left; width: 48%; margin: 2px 2% 22px 0; }
+.threeColist li {width: 29%; margin: 10px 2%; }
 }
+
+
+
+
 .paqEstado {margin: 40px 0}
 .paqEstado li::before {content: "\f101"; font-family: FontAwesome; display: inline-block; margin-left: -1.3em; width: 1.3em; padding-right: 10px; color: #00a4ba !important; font-size: 13px}
 .paqEstado ul, .paqEstado li {list-style-type: none;}
 .paqEstado li a, .paqEstado li a:visited { color: #00a4ba; font-weight: 600 }
 .paqEstado li a:hover,.paqEstado li a:focus {color: #98ac33; text-decoration: none}
 
-.indice-B {border-radius:4px; border:1px solid #e0e3ed; background: #f2f5ff; border: 1px solid #e0e3ed; }
+.indice-B {border-radius:4px; background: #f2f5ff; border: 1px solid #e0e3ed; }
 .indice-B ol { }
 .indice-B p {margin: 10px auto; text-align: center; border-bottom: 1px dashed #ddd}
 .indice-B li { padding: 3px 0; margin: 5px 0; }
@@ -534,3 +544,14 @@ tbody td {display: block;  text-align:left;}
 	width: 100%;
 	height: 100%;
 }
+.emp404 {text-align: center; margin: 10px auto}
+.emp404 img {width: 100%}
+
+.indice-A {margin-bottom: 20px; background: #f4f6f8; border-radius: 5px; border:1px solid #00bcd4;}
+.indice-A p{text-align: center; line-height: normal; margin: 0 auto 5px auto; padding-top: 5px}
+.list-group-indice-A:first-child .list-group-item:first-child { border-top: 0; }
+.list-group-indice-A .list-group-item {  border-right: 0; border-left: 0; border-radius: 0; border-bottom: 1px dashed #e5e8f2; position: relative; display: list-item; padding: .75rem 1.25rem; margin-bottom: -1px; list-style-position: inside; background: transparent;  }
+.list-group-indice-A a, .list-group-indice-A a:visited {color: #00bcd4; font-weight: 400;}
+.list-group-indice-A a:hover, .list-group-indice-A a:focus {color: #008ca4; text-decoration: none;}
+
+
