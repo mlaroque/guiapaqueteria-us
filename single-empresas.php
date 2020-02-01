@@ -91,9 +91,9 @@ get_header();
 					<?php if($post->post_parent > 0): ?>
 
 						<?php get_template_part("inc/sucursales/sucursales","detalles"); ?>
-						<?php get_template_part("inc/sucursales/sucursales","listado"); ?>
+						
 					<?php endif; ?>
-					
+						<?php get_template_part("inc/sucursales/sucursales","listado"); ?>
 			</main> 
 		</div>
 		</div> 
