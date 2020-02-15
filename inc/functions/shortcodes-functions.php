@@ -1,4 +1,32 @@
 <?php
+//Buscador de empresas near me (cerca)
+add_shortcode( 'buscador_sucursales', 'buscador_sucursales');
+
+function buscador_sucursales( $content){
+
+        $GLOBALS['buscar_sucursales'] = "si";
+
+     /*    if (!wp_script_is( $handle, $list )) {
+            wp_register_script( 'busc_zip_se_init.js', get_stylesheet_directory_uri().'/js/busc_zip_se_init.js');
+            wp_enqueue_script( 'busc_zip_se_init.js','',array(),false,true );
+        }
+        if (!wp_script_is( $handle, $list )) {
+            wp_register_script( 'typeahead', get_stylesheet_directory_uri().'/js/typeahead.min.js');
+            wp_enqueue_script( 'typeahead','',array(),false,true ); 
+        }*/
+        if (!wp_script_is( $handle, $list )) {
+            wp_register_script( 'buscar_sucursales.js', get_stylesheet_directory_uri().'/js/buscar_sucursales.js');
+            wp_enqueue_script( 'buscar_sucursales.js','',array(),false,true );
+        }
+
+        #TODO investigar que hace esto para ver si lo incorporo o no
+        ob_start();
+        get_template_part("inc/template","buscador");
+        $content .= ob_get_clean();
+        
+    return $content;
+}
+
 //Buscador de sucursales que se apoya en el código de buscador de códigos postales
 add_shortcode( 'resultados_sucursales', 'resultados_sucursales');
 

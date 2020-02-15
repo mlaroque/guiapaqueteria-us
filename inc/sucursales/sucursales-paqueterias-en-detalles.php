@@ -5,35 +5,65 @@ global $codigo_postal;
 global $colonia;
 global $ciudad;
 global $estado;
+global $empresa;
+
 $suc_rows = array();
 
-if($codigo_postal && $codigo_postal !== ""){
-	$suc_rows_codigo = $wpdb->get_results( "SELECT * FROM LCMN_SUCURSALES_DETALLES WHERE CODIGO_POSTAL = " . trim($codigo_postal) . "" . $filter_paqueteria . " ORDER BY CODIGO_POSTAL");
+if($empresa && $ciudad){
+	if($empresa == 'todas'){
+		$empresa = '';
+	} else {
+		$empresa = str_replace( '-',' ',$empresa);
 
-	foreach($suc_rows_codigo as $suc_row_codigo){
-		$suc_rows[$suc_row_codigo->ID] = $suc_row_codigo;
 	}
-}
-
-
-$suc_rows_municipio = $wpdb->get_results( "SELECT * FROM LCMN_SUCURSALES_DETALLES WHERE CIUDAD = '" . trim($ciudad) . "'" . $filter_paqueteria . " ORDER BY CODIGO_POSTAL" );
-
-foreach($suc_rows_municipio as $suc_row_municipio){
-	if (!isset($suc_rows[$suc_row_municipio->ID])) {
-		$suc_rows[$suc_row_municipio->ID] = $suc_row_municipio;
+	if($ciudad == 'todas'){
+		$ciudad = '';
+	} else {
+		$ciudad = str_replace( '-',' ',$ciudad);
 	}
-}
 
-if((!$codigo_postal || $codigo_postal == "") && (!$ciudad || $ciudad == "") && $estado){
-	$estado = str_replace("-", " ", $estado);
-	$suc_rows_estados = $wpdb->get_results( "SELECT * FROM LCMN_SUCURSALES_DETALLES WHERE DEPARTAMENTO = '" . trim($estado) . "'" . $filter_paqueteria . " ORDER BY CODIGO_POSTAL" );
-
-	foreach($suc_rows_estados as $suc_rows_estado){
-		if (!isset($suc_rows[$suc_rows_estado->ID])) {
-			$suc_rows[$suc_rows_estado->ID] = $suc_rows_estado;
+	$suc_rows_empresas = $wpdb->get_results( "SELECT * FROM LCMN_SUCURSALES_DETALLES WHERE CIUDAD LIKE '%$ciudad%' AND NOMBRE LIKE '%$empresa%'" );
+	/* echo $ciudad, $empresa;
+	echo count($suc_rows_empresas); */
+	foreach($suc_rows_empresas as $suc_row_empresa){
+		if (!isset($suc_rows[$suc_row_empresa->ID])) {
+			$suc_rows[$suc_row_empresa->ID] = $suc_row_empresa;
 		}
 	}
+
+}else{
+
+
+	if($codigo_postal && $codigo_postal !== ""){
+		$suc_rows_codigo = $wpdb->get_results( "SELECT * FROM LCMN_SUCURSALES_DETALLES WHERE CODIGO_POSTAL = " . trim($codigo_postal) . "" . $filter_paqueteria . " ORDER BY CODIGO_POSTAL");
+	
+		foreach($suc_rows_codigo as $suc_row_codigo){
+			$suc_rows[$suc_row_codigo->ID] = $suc_row_codigo;
+		}
+	}
+	
+	
+	$suc_rows_municipio = $wpdb->get_results( "SELECT * FROM LCMN_SUCURSALES_DETALLES WHERE CIUDAD = '" . trim($ciudad) . "'" . $filter_paqueteria . " ORDER BY CODIGO_POSTAL" );
+	
+	foreach($suc_rows_municipio as $suc_row_municipio){
+		if (!isset($suc_rows[$suc_row_municipio->ID])) {
+			$suc_rows[$suc_row_municipio->ID] = $suc_row_municipio;
+		}
+	}
+	
+	if((!$codigo_postal || $codigo_postal == "") && (!$ciudad || $ciudad == "") && $estado){
+		$estado = str_replace("-", " ", $estado);
+		$suc_rows_estados = $wpdb->get_results( "SELECT * FROM LCMN_SUCURSALES_DETALLES WHERE DEPARTAMENTO = '" . trim($estado) . "'" . $filter_paqueteria . " ORDER BY CODIGO_POSTAL" );
+	
+		foreach($suc_rows_estados as $suc_rows_estado){
+			if (!isset($suc_rows[$suc_rows_estado->ID])) {
+				$suc_rows[$suc_rows_estado->ID] = $suc_rows_estado;
+			}
+		}
+	}
+	
 }
+
 
 
 ?>

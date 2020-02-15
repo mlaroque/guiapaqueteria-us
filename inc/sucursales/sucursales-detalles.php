@@ -2,7 +2,12 @@
 global $post;
 include '/home/guiapaqueteria/us_connect_to_db.php';
 
-$sql = 'SELECT * FROM LCMN_SUCURSALES_DETALLES WHERE POST_ID = ' . $post->ID;
+global $empresa;
+global $ciudad;
+
+
+	$sql = 'SELECT * FROM LCMN_SUCURSALES_DETALLES WHERE POST_ID = ' . $post->ID;
+
 
 $results = array();
 $count = 1;

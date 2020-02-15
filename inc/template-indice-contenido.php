@@ -8,8 +8,11 @@
 				preg_match_all('/<h2(.*?)>(.*?)<\/h2/s', $post->post_content, $matches_global, PREG_PATTERN_ORDER); 
 				 foreach($matches_global[2] as $match):
 
-			?>
-				<li><a href="#<?php echo $id_text; ?>"><?php echo $match; ?></a></li>
+			?>	
+				<li><a href="#<?php echo strtolower(urlencode($match)); ?>"><?php echo $match; ?></a></li>
+
+				<!-- LO DEJO COMENTADO PORQUE NO ESTA PONIENDO BIEN EL ENLACE -->
+				<!-- <li><a href="#<?php echo $id_text; ?>"><?php echo $match; ?></a></li> -->
 			<?php endforeach; ?>
 
 			</ol>

@@ -23,101 +23,51 @@ $purified_content = apply_filters('the_content',$post->post_content);
 	
 
 <!--INDICE-->
-<!-- TODO indice dinámico -->
-<div class="col-12 col-sm-5 col-md-4 col-lg-4">
-	<div class="indice-A">
-		<p class="text-center"><b>Indíce</b></p>
-			<ol class="list-group list-group-indice-A">
-			 	<li class="list-group-item"><a href="#">¿Qué es?</a></li>
-			 	<li class="list-group-item"><a href="#">Servicios de paquetería y mensajería</a></li>
-			 	<li class="list-group-item"><a href="#">Empresas de Paquetería y Mensajería</a></li>
-			 	<li class="list-group-item"><a href="#">Paqueterías cerca de ti</a></li>
-			 	<li class="list-group-item"><a href="#">Buscador de sucursales</a></li>
-			</ol>
-   	</div>
-</div>
+<?php  
+echo get_template_part('inc/template', 'indice-contenido');
+?>
 <!--// FIN INDICE-->
 
-<?php
-ob_start();
-echo do_shortcode('[listado_paqueterias]');
-$listado_paqueterias = ob_get_clean();
+<!-- <div class="clearfix"></div> -->
 
-$purified_content = preg_replace('/<h2(.*)>(Paqueterías de Envíos en USA)<\/h2>/', '<h2$1>$2</h2>'.$listado_paqueterias, $purified_content)
+	<?php ob_start(); 
+	echo do_shortcode('[buscador_sucursales]');
+	$buscador = ob_get_clean(); ?>
+	<?php $purified_content = preg_replace('/<h2(.*)>(Buscar.*)<\/h2>/', '<h2$1>$2</h2>'.$buscador, $purified_content); ?>
+
+
+	<?php
+	ob_start();
+	echo do_shortcode('[listado_paqueterias]');
+	$listado_paqueterias = ob_get_clean();
+
+	$purified_content = preg_replace('/<h2(.*)>(Paqueterías de Envíos en USA)<\/h2>/', '<h2$1>$2</h2>'.$listado_paqueterias, $purified_content);
 ?>
-
-<div class="clearfix"></div>
-
- <h2>Buscar Paqueterías Near Me</h2>
-<div class="buscaSuc">
-<div class="buscasucursales">
-
-<div class="col-xs-12 col-sm-5	 col-md-5 col-lg-5">
-    <div class="form-group">
-      <label>Ciudad</label>
-    <select id="estado" class="form-control input-lg">
-      <option value="ciudad-de-mexico">Ciudad de México</option>
-    </select>
-    </div>
-</div>
-<div class="col-xs-12 col-sm-4 col-md-5 col-lg-5">
-    <div class="form-group">
-        <label>Empresa</label>
-      <select id="paqueterias" class="form-control input-lg">
-          <option value="0">Todas</option>
-      </select>
-    </div>
-</div>
-
-<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-  <div class="form-group">
-    <label class="hidden-xs">&nbsp;</label>
-    <button class="btn btn-verde btn-lg btn-block" type="submit" onclick="buscar_sucursales();">Buscar</button>
-  </div>
-</div>
-</div>
-</div>
 
 <?php echo $purified_content;?>
 
-
 <div class="clearfix"></div>
-<h2>Paqueterías en</h2>
+
+<?php  
+	$args = array(
+		'post_type' => 'paqueterias-en',
+		'posts_per_page' => -1,
+		'orderby' => 'title',
+		'order' => 'ASC'
+	);
+
+	$posts = get_posts($args);
+?>
+<!-- LISTADO DE ENLACES A PAQUETERIAS EN CIUDAD -->
 <ul class="SUCFilter">
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/aguascalientes/">Aguascalientes</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/baja-california/">Baja California</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/baja-california-sur/">Baja California Sur</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/campeche/">Campeche</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/chiapas/">Chiapas</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/chihuahua/">Chihuahua</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/paqueterias-en-ciudad-de-mexico/">Ciudad de México</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/coahuila-de-zaragoza/">Coahuila de Zaragoza</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/colima/">Colima</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/durango/">Durango</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/guanajuato/">Guanajuato</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/guerrero/">Guerrero</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/hidalgo/">Hidalgo</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/jalisco/">Jalisco</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/de-mexico/">México</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/michoacan/">Michoacán</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/nayarit/">Nayarit</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/nuevo-leon/">Nuevo León</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/oaxaca/">Oaxaca</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/puebla/">Puebla</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/queretaro/">Querétaro Arteaga</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/quintana-roo/">Quintana Roo</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/san-luis-potosi/">San Luis Potosí</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/sinaloa/">Sinaloa</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/sonora/">Sonora</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/tabasco/">Tabasco</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/tamaulipas/">Tamaulipas</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/tlaxcala/">Tlaxcala</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/veracruz/">Veracruz</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/yucatan/">Yucatán</a></li>
-			<li><a href="https://guiapaqueteria.com/paqueterias-en-estado/zacatecas/">Zacatecas</a></li>
-		</ul>
-	<br>
+		<?php foreach($posts as $paqueteria): ?>
+			<li><a href="<?php echo get_permalink($paqueteria->ID); ?>"> <?php echo get_the_title($paqueteria->ID); ?> </a></li>
+		<?php endforeach; ?>
+</ul>
+
+<br>
 <hr>
+
 <h2>Sucursales más buscadas</h2>
  	<ul class="threeColist">
 		<li><a href="https://guiapaqueteria.com/us/empresas/dhl/houston/">Paqueterías DHL en Houston</a></li>
