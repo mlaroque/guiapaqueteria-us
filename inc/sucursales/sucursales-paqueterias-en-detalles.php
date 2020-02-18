@@ -64,7 +64,7 @@ if($empresa && $ciudad){
 	
 }
 
-
+echo do_shortcode('[buscador_sucursales]');
 
 ?>
 						<?php
