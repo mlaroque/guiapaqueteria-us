@@ -28,8 +28,10 @@ function guiapaq_add_custom_box() {
 /* Prints the box content */
 function guiapaq_inner_custom_box( $post ) {
 ?>
-    <input name="telefono" value="<?php echo get_post_meta( $post->ID, 'paqueteria_tel', true ); ?>" placeholder="Telefono" style="width:100%;"/><br />
-	<input name="web" value="<?php echo get_post_meta( $post->ID, 'paqueteria_web', true ); ?>" placeholder="Página internet" style="width:100%;" /><br />
+    <!-- <input name="telefono" value="<?php echo get_post_meta( $post->ID, 'paqueteria_tel', true ); ?>" placeholder="Telefono" style="width:100%;"/><br /> -->
+    <input name="telefono" value="<?php echo get_post_meta( $post->ID, 'telefono', true ); ?>" placeholder="Telefono" style="width:100%;"/><br />
+	<input name="web" value="<?php echo get_post_meta( $post->ID, 'web', true ); ?>" placeholder="Página internet" style="width:100%;" /><br />
+	<!-- <input name="paqueteria_contacto" value="<?php echo get_post_meta( $post->ID, 'paqueteria_contacto', true ); ?>" placeholder="Contacto" style="width:100%;" /><br /> -->
 	<input name="paqueteria_contacto" value="<?php echo get_post_meta( $post->ID, 'paqueteria_contacto', true ); ?>" placeholder="Contacto" style="width:100%;" /><br />
     <input name="paqueteria_att-tel" value="<?php echo get_post_meta( $post->ID, 'paqueteria_att-tel', true ); ?>" placeholder="Atención Telefonica" style="width:100%;"/><br />
 
