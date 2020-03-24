@@ -361,6 +361,48 @@ add_action( 'init', 'add_taxonomies_to_pages' );
 /* Incluimos funciones que pueden funcionar sin wordpress */
 //require_once ( get_template_directory() . '/inc/functions/not-wp-functions.php' );
 
+    class LCMN_Walker extends Walker_Nav_Menu {
+    private $curItem;
+    // Displays start of an element. E.g '<li> Item Name'
+    // @see Walker::start_el()
+    function start_el(&$output, $item, $depth=0, $args=array(), $id = 0) {
+      $this->curItem = $item;
+        $object = $item->object;
+        $type = $item->type;
+        $title = $item->title;
+        $description = $item->description;
+        $permalink = $item->url;
+
+      if($depth > 0){
+            $output .= "<li class='hidden subtoggle-".$item->menu_item_parent." " .  implode(" ", $item->classes) . "'>";
+      }else{
+            $output .= "<li class='" .  implode(" ", $item->classes) . "'>";
+      }
+        
+      //Add SPAN if no Permalink
+      if( $permalink && $permalink != '#' ) {
+        $output .= '<a href="' . $permalink . '">';
+      } else {
+        $output .= '<a onclick="menu_toggle('.$item->ID.');">';
+      }
+       
+      $output .= $title;
+
+      if( $description != '' && $depth == 0 ) {
+        $output .= '<small class="description">' . $description . '</small>';
+      }
+
+
+      $output .= '</a>';
+
+    }
+
+    function start_lvl(&$output, $item, $depth) {
+        $output .= '<ul id="sub-'.$this->curItem->ID.'" class="sub-menu">';
+    } 
+    }
+
+
 
 /**************************************/
 /***********END*****************/

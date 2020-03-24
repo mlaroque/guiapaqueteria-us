@@ -69,14 +69,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-responsive-collapse navbar-right">
           <?php // Display the WordPress menu if available
-          wp_nav_menu( 
-            array( 
-              'menu' => 'Guiapaqueteria 2018', /* menu name */
-              'menu_class' => 'nav navbar-nav',
-              'theme_location' => 'main_nav', /* where in the theme it's assigned */
-              'container' => 'false', /* container class */
-            )
-          ); ?>
+          //wp_nav_menu( 
+          //  array( 
+          //    'menu' => 'Guiapaqueteria 2018', /* menu name */
+          //    'menu_class' => 'nav navbar-nav',
+          //    'theme_location' => 'main_nav', /* where in the theme it's assigned */
+          //    'container' => 'false', /* container class */
+          //  )
+          //); ?>
+          <?php wp_nav_menu(array(
+                          'menu' => 'Guiapaqueteria 2018',
+                         'theme_location' => 'main_nav',
+                         'container' => false,
+                         'walker' => new LCMN_Walker(),
+                         'items_wrap' => '<ul id="%1$s" class="navbar-nav ml-auto">%3$s</ul>') )?>
           </div>
     </div><!-- /.navbar-collapse -->
 
