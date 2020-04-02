@@ -304,7 +304,35 @@ function create_post_type() {
 	'taxonomies' => array( 'category', 'post_tag' ),
 	'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
 	)  
-);
+    );
+
+    register_post_type( 'giros',  
+    array(  
+        'labels' => array(  
+            'name' => __( 'Giros' ),  
+            'singular_name' => __( 'Giro' )  
+        ),  
+    'public' => true,  
+    'menu_position' => 8,  
+    'hierarchical' => true,
+    'taxonomies' => array( 'category', 'post_tag' ),
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'page-attributes')
+    )  
+    );
+
+    register_post_type( 'casilleros',  
+    array(  
+        'labels' => array(  
+            'name' => __( 'Casilleros' ),  
+            'singular_name' => __( 'Casillero' )  
+        ),  
+    'public' => true,  
+    'menu_position' => 9,  
+    'hierarchical' => true,
+    'taxonomies' => array( 'category', 'post_tag' ),
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'page-attributes')
+    )  
+    );
 	
 } 
 
