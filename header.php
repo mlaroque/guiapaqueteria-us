@@ -39,7 +39,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--NEW HEADER BOOTSTRAP-->
 
 <header id="masthead" class="site-header" role="banner">
-   <div class="container-fluid">
+   <div class="container">
      
        <div class="row">
         
