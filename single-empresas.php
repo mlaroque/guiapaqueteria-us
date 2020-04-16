@@ -5,6 +5,43 @@
 get_header();
  ?>
 
+
+
+
+
+        
+  <?php if(!$amp_param):?>
+
+<div class="container-fluid bgOrform">
+<div class="container">
+  <div class="clearfix"></div>
+  <div class="row hpTop">
+          <div class="col-md-12 text-center">
+              <h1 class="blanco">Cotiza tu envío</span></h1>
+    </div>
+
+  <div class="row cotizaBox">
+    <div class="col-xs-12 col-sm-1 col-md-2 col-lg-2 text-center">
+  </div>
+    <div class="col-md-8">
+      <?php include("cotizador.php"); ?>
+        
+      </div>
+          <div class="col-xs-12 col-sm-1 col-md-2 col-lg-2 text-center">
+      </div>
+    </div>
+    <div class="row hpTop">
+          <div class="col-md-12 text-center">
+              <h2 class="blanco">Ahorra hasta 30%</b> en tu envío</h2>
+              <h2 class="blanco">Envíos desde USA</h2>
+           </div>
+         </div>
+
+</div>
+<div class="clearfix"></div>
+   </div>  </div>
+                  <?php endif; ?>     
+     
 <div class="container">
 	<div class="row">
 		<div id="primary" class="content-area col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -15,7 +52,7 @@ get_header();
 			
 			<!-- COMMENT: Licia este es el banner de arriba que no me sale bien, use estos dos archivos y no tuve suerte -->
           	<?php //include("form-vertical-steps.php") ?>
-			<?php include("cotizador.php") ?>
+			<?php //include("cotizador.php") ?>
 
 
 			<?php 
@@ -177,8 +214,7 @@ get_header();
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-<div class="infoLPp">
-					<!--:::::::::::::::::::::::::::::::::: NOME E STELLE :::::::::::::::::::::::::::::::-->
+ 					<!--:::::::::::::::::::::::::::::::::: NOME E STELLE :::::::::::::::::::::::::::::::-->
 					 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				 
 								<div class="col-md-9 col-sm-4 col-xs-12 logoBig">
@@ -246,6 +282,8 @@ get_header();
 				</div>
 		<?php endif; ?> <!-- ELIMINAR -->
 
+
+<div class="infoLPp">
 <div class="clearfix"></div>
 
 

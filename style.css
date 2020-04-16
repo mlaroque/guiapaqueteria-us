@@ -46,7 +46,7 @@ strong { font-weight: 600}
 .googlemap_wrap { height: 0; overflow: hidden; padding-bottom: 65.25%; padding-top: 30px; position: relative; border: 1px solid #fff}
 .googlemap_wrap iframe { height: 100%; left: 0; position: absolute; top: 0; width: 100%}
 .package_container small { font-size: 12px}
-.vopi, .vopi p,  .vopi a, .vopi a:visited { color: #ffb934; text-decoration: none; font-size: 14px}
+.vopi, .vopi p,  .vopi a, .vopi a:visited { color: #ffb934; text-decoration: none; font-size: 14px; text-align: center !important; }
 .vopi a:hover, .vopi a:focus{ color: #b0d400}
 .lc_ads {margin: 15px auto; padding: 0; width: 100%; text-align: center}
 .tb20pad { padding-top: 30px; padding-bottom: 30px}
@@ -104,7 +104,7 @@ strong { font-weight: 600}
 .faq p, .faq li { font-weight: 200; color: #222; text-align: justify; letter-spacing: 0.05em}
 
 /******************************* PAYMENTS **************************************/
-.payments { background: #f4f6f8; padding: 20px 0}
+.payments { background: #f4f6f8; padding: 20px 0; margin-top: 40px;}
 .payments h3 { color: #646878; font-size: 16px; text-transform: uppercase; letter-spacing: 5px !important; margin-bottom: 13px} 
 .payments p { color: #646878; font-size: 16px; margin:0 auto} 
 .payments img { margin: 3px}
@@ -165,9 +165,9 @@ a.btn-cotizarV { color: #fff}
 .ListEmpresa .boxcon:hover {background:#cee7ea}
 .starBoxstar { margin-top: 15px; color: #ffb934 !important; font-size: 25px; padding-right: 5px}
 .starComstar { margin-top: 0; color: #ffb934 !important; font-size: 25px; padding-right: 5px}
-
+.starBoxstar h2 {color: #ffb934 !important; margin: 0 auto !important; font-weight: 600; font-size: 39px;}
 /******************************* PAGINA LP PADRE **************************************/
-.infoLPp {padding: 20px}
+.infoLPp {padding: 20px 0; float: left;}
 .infoLPp p { text-align: justify}
 .infoLPp h2 { text-align: center; font-size: 32px; font-weight: 600; color: #00bcd4; margin: 50px 0 20px 0}
 .infoLPp h3{color: #017b8c; margin-top: 30px; font-size: 20px}
@@ -325,9 +325,6 @@ table th {text-transform: uppercase;font-size: 14px;letter-spacing: 1px}
 .i-info a { color: #000}
 .i-info a:hover { color: #000}
 .i-info img { margin-right: 10px}
-.bigRat {font-size: 35px; font-weight: 600; margin: 0; padding: 0}
-.starBoxstar { margin-top: 15px; color: #ffb934 !important; font-size: 25px; padding-right: 5px}
-.starComstar { margin-top: 0; color: #ffb934 !important; font-size: 25px; padding-right: 5px}
 .form-control { color: #999; opacity: 1; background: #fff; border-radius: 10px}
 .priceV {font-weight: bold; font-size: 22px}
 .resultsV {background: #f8f7f7; margin-top: 15px; margin-bottom: 15px;padding: 10px 0}
@@ -554,5 +551,10 @@ tbody td {display: block;  text-align:left;}
 .list-group-indice-A .list-group-item {  border-right: 0; border-left: 0; border-radius: 0; border-bottom: 1px dashed #e5e8f2; position: relative; display: list-item; padding: .75rem 1.25rem; margin-bottom: -1px; list-style-position: inside; background: transparent;  }
 .list-group-indice-A a, .list-group-indice-A a:visited {color: #00bcd4; font-weight: 400;}
 .list-group-indice-A a:hover, .list-group-indice-A a:focus {color: #008ca4; text-decoration: none;}
+
+.fa {width: 20px; height: 20px; display: inline-block; }
+.fa-star { background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/star_on.svg); background-repeat: no-repeat;}
+.fa-star-half-o {background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/star_half.svg); background-repeat: no-repeat; }
+.fa-star-o {background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/star_off.svg); background-repeat: no-repeat; }
 
 
