@@ -8,23 +8,28 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <h3>Selecciona tu tipo de Envío</h3>
-          <div class="checkbox text-center  ">
-              <label for="paq"> 
-                <input type='radio' name='doc_or_package' value='Package' id="paq"/>
-                Paquete
-              </label> 
-           
-             <label for="doc"> 
-                <input type="radio" name="doc_or_package" value="Document" id="doc"/>
-                Documento
-             </label> 
-            
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group sendPaq">
+              <div class="checkbox text-center">
+                  <input type='radio' name='doc_or_package' value='Package' id="paq"/>
+                  <label for="paq"></label> 
+                  <h6>Paquete</h6>
+              </div>
+            </div>
           </div>
-        </div>
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group sendDoc">
+              <div class="checkbox text-center">
+                  <input type="radio" name="doc_or_package" value="Document" id="doc"/>
+                  <label for="doc"></label> 
+                  <h6>Documento</h6>
+              </div>
+            </div>
+          </div>
        
       </div>
     </div>
-
+  </div>
    <!-- <div class="tab">
       <h3>Tu envío es:</h3>
  

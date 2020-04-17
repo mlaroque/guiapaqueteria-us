@@ -5,7 +5,7 @@
 						//Establecer conexión con la base de datos
 						global $conn_host, $conn_port, $conn_user, $conn_pass, $conn_db;
 						$host = "localhost";
-						$db = "guiapaqu_db";
+						$db = "guiapaqu_us_db";
 						$user = "guiapaqu_user";
 						$pwd = "gasherbrum-8000!";
 		

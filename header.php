@@ -44,7 +44,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        <div class="row">
         
   
-  <nav class="navbar navbar-headerW">
+  <nav class="navbar navbar-headerW navbar-fixed-top">
 
    <div class="col-md-3">
     <!-- Brand and toggle get grouped for better mobile display -->

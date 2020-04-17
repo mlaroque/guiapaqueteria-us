@@ -31,6 +31,11 @@ img.logo-xs { margin: 0}
 a, a:visited {color: #00bcd4}
 a:hover, a:focus {color: #b0d400}
 
+body {padding-top: 40px !important}
+@media (min-width: 768px) {
+body {padding-top: 50px !important}
+}
+
 #country_destino, #country_origen { font-size:18px; line-height:46px; height: auto !important; padding:6px 16px; border:2px solid #00bcd4}
 
 .BGgrisC { background-color: #f4f6f8}
@@ -557,4 +562,10 @@ tbody td {display: block;  text-align:left;}
 .fa-star-half-o {background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/star_half.svg); background-repeat: no-repeat; }
 .fa-star-o {background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/star_off.svg); background-repeat: no-repeat; }
 
-
+.sendPaq input[type=radio] { display:none; }
+.sendPaq input[type=radio] + label { background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/paq_off.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
+.sendPaq input[type=radio]:checked + label { background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/paq.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
+.sendDoc input[type=radio] { display:none; }
+.sendDoc input[type=radio] + label { background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/doc_off.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
+.sendDoc input[type=radio]:checked + label { background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/doc.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
+.seguroIn  { float: left; display: block; width: auto}

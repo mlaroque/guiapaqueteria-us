@@ -11,13 +11,28 @@ get_header();
 
         
   <?php if(!$amp_param):?>
+<!-- COMMENT:  Agrego diseño solo al post Test nuevo diseño (437) -->
+		<?php if($post->ID == 437): ?>	 <!--ELIMINAR.. --> 
+  	<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<ol class="breadcrumb">
+				<li><a href="https://guiapaqueteria.com/us">Inicio</a></li>
+				<li><a href="XXX">XXXX</a></li>
+				<li class="active">XXXX</li>
+			</ol>
+		</div>
+	</div>
+</div>
+
+<?php endif; ?> <!-- ELIMINAR -->
 
 <div class="container-fluid bgOrform">
 <div class="container">
   <div class="clearfix"></div>
   <div class="row hpTop">
           <div class="col-md-12 text-center">
-              <h1 class="blanco">Cotiza tu envío</span></h1>
+              <h2 class="blanco upper">Cotiza tu envío</span></h2>
     </div>
 
   <div class="row cotizaBox">
@@ -252,8 +267,8 @@ get_header();
 							</p>
 							<p class="text-left">	
 								<b>www:</b>
-								<a itemprop="url" href="<?php $url_empresa = get_post_meta( $post->ID, 'web', true ); if (strpos($url_empresa,'http://') === false){
-    							$url_empresa = 'http://'.$url_empresa;  }echo $url_empresa;?>" rel="nofollow" target="_blank">	ir a la página oficial</a>
+								<a itemprop="url" href="<?php $url_empresa = get_post_meta( $post->ID, 'web', true ); if (strpos($url_empresa,'https://') === false){
+    							$url_empresa = 'https://'.$url_empresa;  }echo $url_empresa;?>" rel="nofollow" target="_blank">	ir a la página oficial</a>
     						</p>
 							<p>
 								<b>Contacto</b>
@@ -273,7 +288,9 @@ get_header();
  
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<ul class="nav nav-pills azul-pills navLP">
-						<li role="presentation" class="active"><a class="menu-item-lps" href="#servicios">Servicios</a></li>
+						<li role="presentation" class="active"><a class="menu-item-lps" href="#precios">Precios</a></li>
+						<li role="presentation"><a class="menu-item-lps" href="#cobertura">Cobertura</a></li>
+						<li role="presentation"><a class="menu-item-lps" href="#servicios">Servicios</a></li>
 						<li role="presentation"><a class="menu-item-lps" href="#cotizacion">Cotización</a></li>
 						<li role="presentation"><a class="menu-item-lps" href="#rastreo">Rastreo</a></li>
 						<li role="presentation"><a class="menu-item-lps" href="#faq">Preguntas Frecuentes</a></li>
