@@ -61,7 +61,7 @@ get_header(); ?>
 
  	<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
  		<p><?php echo wp_trim_words( $post_guias->post_content, 55, '...' );?>
-		<a href="<?php echo esc_url( get_permalink($post_guias->ID)); ?>" class="more-link">Read more »</a></p>
+		<a href="<?php echo esc_url( get_permalink($post_guias->ID)); ?>" class="more-link">Leer más »</a></p>
  	</div>
  </div>
 
