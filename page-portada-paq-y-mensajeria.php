@@ -22,13 +22,8 @@ $purified_content = apply_filters('the_content',$post->post_content);
 	<div class="entry-content">
 	
 
-<!--INDICE-->
-<?php  
-echo get_template_part('inc/template', 'indice-contenido');
-?>
-<!--// FIN INDICE-->
-
-<!-- <div class="clearfix"></div> -->
+ <?php //echo get_template_part('inc/template', 'indice-contenido'); ?>
+ 
 
 	<?php ob_start(); 
 	echo do_shortcode('[buscador_sucursales]');
