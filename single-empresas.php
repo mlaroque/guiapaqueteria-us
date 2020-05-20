@@ -498,4 +498,59 @@ get_header();
 </div>
 
 
+
+<!--:::::::::::::::::::::::::::::::TE PODRIA INTERESAR::::::::::::::::::::::::::::::-->
+<div class="container-fluid">
+	<div class="container">
+	<div class="row">
+		<div class="fastGuides clearfix">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h4 class="text-center upper">Otras Empresas</h4>
+			</div>
+
+			<div class="clearfix"></div>
+    
+			    
+ <?php 
+		$args = array(
+				'post_type' => 'empresas',
+				'category_name' => 'paqueteria',
+				'posts_per_page' => 6,
+				'orderby' => 'rand'
+
+			);
+
+		$empresas = get_posts($args);
+
+		foreach($empresas as $empresa):?>
+		<div class="col-12 col-sm-4 col-md-2 col-lg-2 text-center">
+			<div class="REmpresas text-center">
+				<a class="text-center" href="<?php echo get_permalink($empresa->ID); ?>">
+ 							<div class="RempresaImg">
+ 								<img src="<?php echo get_the_post_thumbnail_url($empresa->ID,'medium');?>" class="img-circle" alt="Toda la información sobre <?php echo ($empresa->post_title);?>">
+ 							</div>
+						<div class="clearfix"></div>
+						<p class="text-center">
+							<?php echo ($empresa->post_title);?>
+						</p>
+				</a>
+			</div>
+		</div>
+			
+		<?php endforeach;?>
+		</div>
+
+
+
+		</div>
+	</div>
+</div>
+</div>
+			
+<!--:::::::::::::::::::::::::::::::TE PODRIA INTERESAR::::::::::::::::::::::::::::::-->
+
+
+
+
+
 <?php get_footer(); ?>

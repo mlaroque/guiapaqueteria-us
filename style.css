@@ -73,8 +73,42 @@ strong { font-weight: 600}
 .navbar-headerW .navbar-link {color: #73a1a5}
 .navbar-headerW .navbar-link:hover { color: #73a1a5}
 .logoLP{ width: 75px}
-.navbar-headerW .navbar-nav .current_page_item a {
-    color: #fff; background-color: #00bcd4; }
+.navbar-headerW .navbar-nav .current_page_item a { color: #fff; background-color: #00bcd4; }
+.menu-item-has-children { cursor: pointer; }
+.subActive {
+position: absolute;
+top: 100%;
+background: #fff;
+background-clip: border-box;
+float: left;
+font-size: 14px;
+border: 1px solid rgba(0,0,0,0.15);
+border-radius: 4px;
+box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+z-index: 1111;
+max-width: 300px;
+left: auto;
+right: 10px;
+background-clip: padding-box;
+}
+ul.subActive {
+    width: 92%;
+    padding: 0;
+    float: left;
+}
+ul.subActive li {
+    padding: 0w; width: 100%
+}
+.navbar-headerW .navbar-nav .subActive li a, .navbar-headerW .navbar-nav .subActive li a:visited {
+  color: #333;	font-weight: 400; display: block; width: 92%; padding: 15px 4%;
+}
+.navbar-headerW .navbar-nav .subActive li a:focus, .navbar-headerW .navbar-nav .subActive li a:hover {
+    text-decoration: none;
+    color: #262626;
+    background-color: #f5f5f5;
+}
+.navbar-headerW .navbar-nav .subActive .current_page_item a { background: transparent;   color: #333;}
+
 /******************************* MODAL NEW IVAN **************************************/
 .btn-gris { color: #333; background-color: #fff; border-color: #ccc}
 .btn-gris:hover { background: #ccc; color: #fff; border-color: #ccc}
@@ -99,12 +133,12 @@ strong { font-weight: 600}
 
 /******************************* FAST GUIDES **************************************/
 .fastGuides { padding: 30px 0}
-.fastGuides .cont { padding: 10px; position: relative; transition: .5s; background: #fff; margin: 3px 0 6px 0; float: left}
-.fastGuides img { max-height: 107px; margin-bottom: 10px; display: inline-block}
-.fastGuides h3 { text-align: left; margin-top: 0; clear: none !important; margin-bottom: 5px; font-weight: 600; text-transform: uppercase; font-size: 18px; color:#222}
-.fastGuides p { text-align: left; font-weight: 200; line-height: normal; font-size: 15px}
-.fastGuides .cont:hover {background:#00bcd4; color: #fff}
-.fastGuides .cont:hover p, .fastGuides .cont:hover h3 {color: #fff}
+.fastGuid .cont { padding: 10px; position: relative; transition: .5s; background: #fff; margin: 3px 0 6px 0; float: left}
+.fastGuid img { max-height: 107px; margin-bottom: 10px; display: inline-block}
+.fastGuid h3 { text-align: left; margin-top: 0; clear: none !important; margin-bottom: 5px; font-weight: 600; text-transform: uppercase; font-size: 18px; color:#222}
+.fastGuid p { text-align: left; font-weight: 200; line-height: normal; font-size: 15px}
+.fastGuid .cont:hover {background:#00bcd4; color: #fff}
+.fastGuid .cont:hover p, .fastGuid .cont:hover h3 {color: #fff}
 .faq { text-align: left}
 .faq p, .faq li { font-weight: 200; color: #222; text-align: justify; letter-spacing: 0.05em}
 
@@ -202,6 +236,7 @@ ol.commentlist ul.children li { background: #f8f8f8}
 .col-sm-9.comment-text { width: 95%; margin: 0; margin-top: 0px; margin-left: 0px}
 
 /*:::::::::::::::::::::::SECCION LISTADO SUCURSALES PAIS/CIUDAD**************************/
+#accordion1 { margin: 40px auto }
 .ul-suc {margin-bottom: 0}
 .ul-suc li, .ul-suc li a {font-size: 14px; line-height: 18px; width: 90%}
 .ul-suc a, .ul-suc a:visited {color: #6d6b7d !important; letter-spacing: normal}
@@ -513,7 +548,7 @@ tbody td {display: block;  text-align:left;}
 .logoEmp img {border-radius: 50%;}
 
 /******************************* LISTADO EMPRESAS *************************************/
-.LEmpresas { margin: 10px 0;box-shadow:0 .125rem .25rem rgba(0,0,0,.075) ; float: left; width: 100%}
+.LEmpresas { margin: 10px 0; box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; float: left; width: 100%}
 .LEmpresas a { display: block}
 .LEmpresas img { max-height: 107px; margin: 10px 10px 0 10px; } 
 .LEmpresas p { font-size: 14px; font-weight: 200; line-height: normal; color: #6d6b7d}
@@ -569,3 +604,13 @@ tbody td {display: block;  text-align:left;}
 .sendDoc input[type=radio] + label { background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/doc_off.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
 .sendDoc input[type=radio]:checked + label { background: url(https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/doc.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
 .seguroIn  { float: left; display: block; width: auto}
+
+
+/******************************* RELACIONADOS EMPRESAS *************************************/
+.REmpresas { margin: 10px 0; box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15); float: left; width: 100%}
+.REmpresas a { display: block}
+.REmpresas p { font-size: 14px; line-height: 16px; margin: 10px auto 5px; min-height: 36px; color: #6d6b7d; font-weight: 400; }
+.REmpresas:hover {box-shadow:0 .125rem .25rem rgba(0,0,0,.2);  background: #f9fbfd}
+.REmpresas a:hover {text-decoration: none}
+.RempresaImg img { max-height: 107px; margin: 10px auto 0; text-align: center; float: none; }
+.RempresaImg img { max-height: 107px; margin: 10px auto 0 auto; } 
