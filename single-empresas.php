@@ -236,6 +236,7 @@ get_header();
 									<h1>
 										<?php the_post_thumbnail('medium'); ?>
  										<?php echo $post->post_title; ?></h1>
+ 										<div id="adsense_submenu" class="lc_ads lazy-ads"></div>
 								</div>
 
 
@@ -306,7 +307,23 @@ get_header();
 
 					<?php
 					$purified_content = apply_filters('the_content', $post->post_content);
-					get_template_part("inc/template-indice-contenido");
+					if($post->post_parent < 1){
+						get_template_part("inc/template-indice-contenido");
+					}
+					
+
+					ob_start();?>
+						<div id="adsense_servicios" class="lc_ads lazy-ads"></div>
+					<?php $ad_servicios = ob_get_clean();
+
+					$purified_content = preg_replace("/<h2(.*?)>(.*?)ervicios(.*?)<\/h2>/", "<h2$1>$2ervicios$3</h2>" . $ad_servicios, $purified_content);
+
+					ob_start();?>
+						<div id="adsense_cotiza" class="lc_ads lazy-ads"></div>
+					<?php $ad_cotiza = ob_get_clean();
+
+					$purified_content = preg_replace("/<h2(.*?)>(.*?)otiza(.*?)<\/h2>/", "<h2$1>$2otiza$3</h2>" . $ad_cotiza, $purified_content);
+
 					echo $purified_content;
 					// the_content();
 					?>
@@ -554,3 +571,10 @@ get_header();
 
 
 <?php get_footer(); ?>
+<script async src="<?php echo get_template_directory_uri(); ?>/js/ads/main.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<?php if($post->post_parent > 0): ?>
+	<script async src="<?php echo get_template_directory_uri(); ?>/js/ads/empresas_sucursales.js"></script>
+<?php else: ?>
+	<script async src="<?php echo get_template_directory_uri(); ?>/js/ads/empresas.js"></script>
+<?php endif;?>

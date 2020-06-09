@@ -11,8 +11,33 @@ get_header();
 			<main id="main" class="site-main" role="main">
  
  					 <h1 class="text-left upper"><?php echo $post->post_title; ?></h1>
+ 					 <div id="adsense_submenu" class="lc_ads lazy-ads"></div>
  					 <?php
-					the_content();
+ 					 $purified_content = apply_filters('the_content', $post->post_content);
+
+ 					function insert_ads($m) {
+    			    		static $matchcount = 0;
+
+    			    		$matchcount++;
+
+							if($matchcount == 1){
+								ob_start();?>
+									<div id="adsense_1erh2" class="lc_ads lazy-ads"></div>
+    					     	<?php return $m[0] . ob_get_clean();// ;
+    					    }else if($matchcount == 3){
+    					     	ob_start();?>
+									<div id="adsense_3erh2" class="lc_ads lazy-ads"></div>
+    					     	<?php return $m[0] . ob_get_clean();// ;
+    					    }else{
+    					    	return $m[0];
+    					    }
+    					    
+    					}
+
+
+				 		$purified_content = preg_replace_callback('/<h2(.*?)>(.*?)<\/h2>/', 'insert_ads', $purified_content);
+
+					echo $purified_content;
 					?>
  
 				 
@@ -73,3 +98,6 @@ get_header();
 
 
 <?php get_footer(); ?>
+<script async src="<?php echo get_template_directory_uri(); ?>/js/ads/main.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="<?php echo get_template_directory_uri(); ?>/js/ads/guias.js"></script>

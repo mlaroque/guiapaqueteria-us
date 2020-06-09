@@ -56,7 +56,7 @@ foreach ($conn->query($sql) as $row) {
 				<h2 class="grisP">Encuentra aquí los horarios y teléfonos de las oficinas:</h2>
 			</div>
 		</div>
-
+		<?php $count = 1; ?>
 		<?php foreach($results as $result): ?>
 		<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 well wellLPhija">
@@ -99,11 +99,17 @@ foreach ($conn->query($sql) as $row) {
 								</iframe>
 							</div>
 						<div class="clearfix"></div>
-				</div>					
-		</div>
+				</div>	
+
 		</div>
 
-		<?php endforeach; ?>
+		</div>
+		<?php if($count % 3 == 0): ?>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+				<div id="adsense_cada3<?php echo $count;?>" class="lc_ads lazy-ads"></div>
+			</div>
+		<?php endif;?>
+		<?php $count += 1; endforeach; ?>
 
 	</main>
 

@@ -96,7 +96,7 @@ foreach($contact_posts as $contact_post):
 					<ins class="adsbygoogle"
 					     style="display:block"
 					     data-ad-client="ca-pub-7600038231425274"
-					     data-ad-slot="2202426433"
+					     data-ad-slot="6409799093"
 					     data-ad-format="link"></ins>
 					<script>
 					(adsbygoogle = window.adsbygoogle || []).push({});
