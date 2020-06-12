@@ -121,12 +121,17 @@ echo do_shortcode('[buscador_sucursales]');
 
 </div>
 </div>
+								<?php if($count % 5 == 0 && $count < count($suc_rows) && $count < 8): ?>
+									<div id="adsense_cada5<?php echo $count;?>" class="lc_ads lazy-ads"></div>
+								<?php endif; ?>
  								<?php
  								$count += 1;
 									 endforeach;
 
 								?>
+
 								<?php if($count > 8): ?>
 								<button class="btn btn-verde btn-lg btn-block" onclick="jQuery('.blacoBG:hidden').slice(0,8).show();" style="text-align:center;" id="ver_mas_btn">Ver más</button>
 								<div class="clearfix"></div>
 								<?php endif; ?>
+								<div id="adsense_bottom" class="lc_ads lazy-ads"></div>
