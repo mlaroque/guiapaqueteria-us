@@ -13,7 +13,13 @@ $GLOBALS['empresa'] = $empresa;
 $GLOBALS['ciudad'] = $ciudad;
 
 ?>
-
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<?php echo get_template_part("inc/template","breadcrumbs"); ?>
+		</div>
+	</div>
+</div>
 
 
 <div class="clearfix"></div>

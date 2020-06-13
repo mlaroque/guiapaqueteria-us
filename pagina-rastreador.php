@@ -8,6 +8,15 @@ Template Name: PG RASTREADOR
 <div id="content">
 <div id="main" role="main">
 
+	<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<?php echo get_template_part("inc/template","breadcrumbs"); ?>
+		</div>
+	</div>
+</div>
+
+
 <!--::::::::::::: RASTREADOR ::::::::::::::-->        
  
           <?php include("rastreador.php"); ?>

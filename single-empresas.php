@@ -15,12 +15,8 @@ get_header();
 		<?php if($post->ID == 437): ?>	 <!--ELIMINAR.. --> 
   	<div class="container">
 	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<ol class="breadcrumb">
-				<li><a href="https://guiapaqueteria.com/us">Inicio</a></li>
-				<li><a href="XXX">XXXX</a></li>
-				<li class="active">XXXX</li>
-			</ol>
+		<div class="col-12">
+			<?php echo get_template_part("inc/template","breadcrumbs"); ?>
 		</div>
 	</div>
 </div>
@@ -56,6 +52,16 @@ get_header();
 <div class="clearfix"></div>
    </div>  </div>
                   <?php endif; ?>     
+     
+
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<?php echo get_template_part("inc/template","breadcrumbs"); ?>
+		</div>
+	</div>
+</div>
+
      
 <div class="container">
 	<div class="row">

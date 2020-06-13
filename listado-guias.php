@@ -14,7 +14,13 @@
 
 get_header(); ?>
 	
-
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<?php echo get_template_part("inc/template","breadcrumbs"); ?>
+		</div>
+	</div>
+</div>
 <div class="container">
 	<div class="row">
 		<div id="primary" class="content-area col-xs-12 col-sm-12 col-md-12 col-lg-12">

@@ -14,6 +14,15 @@ $purified_content = apply_filters('the_content',$post->post_content);
 		<div id="primary" class="content-area col-xs-12 col-sm-12 col-md-12 col-lg-12 infoLPp">
 			<main id="main" class="site-main" role="main">
 
+
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<?php echo get_template_part("inc/template","breadcrumbs"); ?>
+		</div>
+	</div>
+</div>
+
 			
 <article id="post-15" class="post-15 page type-page status-publish hentry">
 	<header class="entry-header">
