@@ -53,18 +53,17 @@ foreach ($conn->query($sql) as $row) {
 		
 		<div class="row">
 			<div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mt-2 mb-4">
-				<h2 class="grisP">Encuentra aquí los horarios y teléfonos de las oficinas:</h2>
+				<h2 class="grisP mb-15">Encuentra aquí los horarios y teléfonos de las oficinas:</h2>
 			</div>
 		</div>
 		<?php $count = 1; ?>
 		<?php foreach($results as $result): ?>
 		<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 well wellLPhija">
-						<h2 class="noMarPad titHijas"><?=$result["nombre"]?></h2>
-						<hr>
-						
- 													
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+							<h2 class="noMarPad titHijas text-left"><?=$result["nombre"]?></h2>
+
 								<div class="i-scheda">									
 							<h5><b>Dirección</b></h5>
 							<p><?=$result['calle']?> </p>
@@ -88,7 +87,7 @@ foreach ($conn->query($sql) as $row) {
 							</div>
 								</div>
 								
- 				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+ 				<div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 text-center">
 							<div class="clearfix"></div>
 							<div class="googlemap_wrap">
 								<iframe

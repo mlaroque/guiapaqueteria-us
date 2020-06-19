@@ -16,7 +16,7 @@
 
 						<header>
 							
-						 <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1> sdaasd
+						 <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 						
 						</header> <!-- end article header -->
 

@@ -242,7 +242,6 @@ get_header();
 									<h1>
 										<?php the_post_thumbnail('medium'); ?>
  										<?php echo $post->post_title; ?></h1>
- 										<div id="adsense_submenu" class="lc_ads lazy-ads"></div>
 								</div>
 
 
@@ -259,8 +258,10 @@ get_header();
 					</div>
 
 					<!--:::::::::::::::::::::::::::::::::: ///NOME E STELLE :::::::::::::::::::::::::::::::-->
+												<div class="clearfix"></div>
 					
-
+ 										<div id="adsense_submenu" class="lc_ads lazy-ads"></div>
+												<div class="clearfix"></div>
 
 <!--:::::::::::::::::::::::::::::::::: SCHEDA PAQUETERIA ::::::::::::::::::::::::::::::: -->
 <?php if($post->ID == 437): ?> <!-- ELIMINAR -->
