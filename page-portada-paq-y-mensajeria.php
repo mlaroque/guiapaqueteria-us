@@ -28,6 +28,21 @@ $purified_content = apply_filters('the_content',$post->post_content);
 	<header class="entry-header">
 		<h1 class="entry-title">Empresas de Servicios de Paquetería y Mensajería</h1>	</header><!-- .entry-header -->
 
+		<div class="lc_ads">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Guiapaqueteria US Empresas Listado Abajo H1 Submenu -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-7600038231425274"
+			     data-ad-slot="9965466924"
+			     data-ad-format="link"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+
+		</div>
+
 	<div class="entry-content">
 	
 
