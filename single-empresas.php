@@ -315,21 +315,30 @@ get_header();
 					<?php
 					$purified_content = apply_filters('the_content', $post->post_content);
 					if($post->post_parent < 1){
-						get_template_part("inc/template-indice-contenido");
+						//get_template_part("inc/template-indice-contenido");
 					}
 					
 
 					ob_start();?>
+
 						<div id="adsense_servicios" class="lc_ads lazy-ads"></div>
 					<?php $ad_servicios = ob_get_clean();
 
 					$purified_content = preg_replace("/<h2(.*?)>(.*?)ervicios(.*?)<\/h2>/", "<h2$1>$2ervicios$3</h2>" . $ad_servicios, $purified_content);
 
 					ob_start();?>
+
+
+                  
+
 						<div id="adsense_cotiza" class="lc_ads lazy-ads"></div>
 					<?php $ad_cotiza = ob_get_clean();
 
 					$purified_content = preg_replace("/<h2(.*?)>(.*?)otiza(.*?)<\/h2>/", "<h2$1>$2otiza$3</h2>" . $ad_cotiza, $purified_content);
+					
+					$links = 'https://guiapaqueteria.com/rastreador/';
+                    $links = preg_replace('/\/rastreador/','/us/rastreador',$purified_content);
+                    echo $links; 
 
 					echo $purified_content;
 					// the_content();
