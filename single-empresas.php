@@ -264,49 +264,9 @@ get_header();
 												<div class="clearfix"></div>
 
 <!--:::::::::::::::::::::::::::::::::: SCHEDA PAQUETERIA ::::::::::::::::::::::::::::::: -->
-<?php if($post->ID == 437): ?> <!-- ELIMINAR -->
 
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wellinfoLP" itemscope itemtype="http://schema.org/Organization">
 
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-							<p class="text-left">
-								<b>Teléfono</b>
-								<span itemprop="telephone"><?php echo get_post_meta( $post->ID, 'telefono', true ); ?></span>
-							</p>
-							<p class="text-left">	
-								<b>www:</b>
-								<a itemprop="url" href="<?php $url_empresa = get_post_meta( $post->ID, 'web', true ); if (strpos($url_empresa,'https://') === false){
-    							$url_empresa = 'https://'.$url_empresa;  }echo $url_empresa;?>" rel="nofollow" target="_blank">	ir a la página oficial</a>
-    						</p>
-							<p>
-								<b>Contacto</b>
-
-								<a itemprop="url" href="<?php $url_empresa = get_post_meta( $post->ID, 'paqueteria_contacto', true ); if (strpos($url_empresa,'http://') === false){
-    							$url_empresa = 'http://'.$url_empresa;  }echo $url_empresa;?>" rel="nofollow" target="_blank"> @Contacto</a>
-
- 
-							</p>
-					</div>	 
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-								<p class="text-left"><b>Atención telefónica</b><br/>
-									<span itemprop="att-telefono"><?php echo get_post_meta( $post->ID, 'paqueteria_att-tel', true ); ?></span>
-								</p>
-						</div>
-				</div>
- 
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<ul class="nav nav-pills azul-pills navLP">
-						<li role="presentation" class="active"><a class="menu-item-lps" href="#precios">Precios</a></li>
-						<li role="presentation"><a class="menu-item-lps" href="#cobertura">Cobertura</a></li>
-						<li role="presentation"><a class="menu-item-lps" href="#servicios">Servicios</a></li>
-						<li role="presentation"><a class="menu-item-lps" href="#cotizacion">Cotización</a></li>
-						<li role="presentation"><a class="menu-item-lps" href="#rastreo">Rastreo</a></li>
-						<li role="presentation"><a class="menu-item-lps" href="#faq">Preguntas Frecuentes</a></li>
-						<li role="presentation"><a class="menu-item-lps" href="#list-sucursales">Sucursales</a></li>
-					</ul>
-				</div>
-		<?php endif; ?> <!-- ELIMINAR -->
-
+<?php include("menu-horizontal.php"); ?>
 
 <div class="infoLPp">
 <div class="clearfix"></div>
@@ -323,8 +283,9 @@ get_header();
 
 						<div id="adsense_servicios" class="lc_ads lazy-ads"></div>
 					<?php $ad_servicios = ob_get_clean();
-
-					$purified_content = preg_replace("/<h2(.*?)>(.*?)ervicios(.*?)<\/h2>/", "<h2$1>$2ervicios$3</h2>" . $ad_servicios, $purified_content);
+                         $purified_content = preg_replace("/<h2(.*?)>(.*?)Precios(.*?)(?=<\/h2>)/", "<h2 id='precios'$1>$2Precios$3</h2>" . $ad_cotiza, $purified_content);
+                         $purified_content = preg_replace("/<h2(.*?)>(.*?)Cobertura(.*?)(?=<\/h2>)/", "<h2 id='cobertura'$1>$2Cobertura$3</h2>" . $ad_cotiza, $purified_content);
+					    $purified_content = preg_replace("/<h2(.*?)>(.*?)Servicios(.*?)<\/h2>/", "<h2 id='servicios'$1>$2Servicios$3</h2>" . $ad_servicios, $purified_content); 
 
 					ob_start();?>
 
@@ -334,13 +295,16 @@ get_header();
 						<div id="adsense_cotiza" class="lc_ads lazy-ads"></div>
 					<?php $ad_cotiza = ob_get_clean();
 
-					$purified_content = preg_replace("/<h2(.*?)>(.*?)otiza(.*?)<\/h2>/", "<h2$1>$2otiza$3</h2>" . $ad_cotiza, $purified_content);
+					$purified_content = preg_replace("/<h2(.*?)>(.*?)Cotiza(.*?)(?=<\/h2>)/", "<h2 id='cotizacion'$1>$2Cotiza$3</h2>" . $ad_cotiza, $purified_content);
+                        $purified_content = preg_replace("/<h2(.*?)>(.*?)Preguntas (.*?)(?=<\/h2>)/", "<h2 id='faq'$1>$2Preguntas$3</h2>", $purified_content);
+                        $purified_content = preg_replace("/<h2(.*?)>(.*?)Rastreo(.*?)(?=<\/h2>)/", "<h2 id='rastreo'$1>$2Rastreo$3</h2>", $purified_content);
+                        $purified_content = preg_replace("/<h2(.*?)>(.*?)Sucursales y Teléfonos(.*?)(?=<\/h2>)/", "<h2 id='list-sucursales'$1>$2Sucursales y Teléfonos$3</h2>", $purified_content);
 					
 					$links = 'https://guiapaqueteria.com/rastreador/';
                     $links = preg_replace('/\/rastreador/','/us/rastreador',$purified_content);
                     echo $links; 
 
-					echo $purified_content;
+				
 					// the_content();
 					?>
 
@@ -357,7 +321,7 @@ get_header();
  
 				<div id="opiniones" class="col-md-12 col-xs-12">
 					<?php if(!$amp_param): ?>
-						<h3 class="upper" style="border-bottom:1px dashed #999;  line-height: 35px"><b>Opiniones del servicio de <?php echo $post->post_title; ?>:</b></h3>
+						<h3 class="upper" style="border-bottom:1px dashed #999;  line-height: 35px"><b>Opiniones del servicio <?php echo $post->post_title; ?>:</b></h3>
 					<?php else: ?>
 						<h3 class="upper reviewsTitle"><b>Opiniones del servicio de <?php echo $post->post_title; ?>:</b></h3>
 					<?php endif; ?>
