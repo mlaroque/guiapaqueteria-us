@@ -37,6 +37,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div id="page" class="site">
 
 <!--NEW HEADER BOOTSTRAP-->
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/cotizador.css">
 
 <header id="masthead" class="site-header" role="banner">
    <div class="container">

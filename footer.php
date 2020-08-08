@@ -101,6 +101,8 @@
  
 </footer> 
 <?php wp_footer(); ?>
+
+<?php if(!$amp_param){include 'modals.php';} ?>
 	
 </body>
 </html>

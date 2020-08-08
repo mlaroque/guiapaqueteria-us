@@ -1,7 +1,28 @@
+
+<div class="col-md-12 text-center">   
+  <h2 class="blanco upper">COTIZA AQUÍ</h2>
+    <small><a class="pointer blanco" data-toggle="modal" data-target=".antesdecotizar"><b>Importante</b>: Antes de Cotizar</a></small>
+  <div class="stepwizard">
+      <div class="stepwizard-row setup-panel">
+        <div class="stepwizard-step">
+        <span class="step">1</span>
+        </div>
+        <div class="stepwizard-step">
+        <span class="step">2</span>
+        </div>
+        <div class="stepwizard-step">
+        <span class="step">3</span>
+        </div>
+        <div class="stepwizard-step">
+        <span class="step">4</span>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+
 <form id="regForm" action="https://guiapaqueteria.com/us/resultados-de-cotizacion/" autocomplete="off">
-
   <div class="clearfix"></div>
-
   <div class="col-xs-12 col-sm-12 col-lg-12">
   <!-- One "tab" for each step in the form: -->
     <div class="tab">
@@ -132,7 +153,7 @@
         </div>
       <?php else: ?>
       <div class="package_container">
-      <div class="col-xs-4 col-md-4" id="">
+      <div class="col-xs-4 col-md-2" id="">
         <div class="form-group">
           <label for="">No. de <small>Paquetes</small> </label>
           <input class="form-control input-lg input_paqueteria"  placeholder="" id="number_packages" name="number_packages[]" value="1" type="number">
@@ -221,24 +242,6 @@
   <div class="clearfix"></div>
 
 </form> 
-<div class="col-md-12 text-center">   
-  <div class="stepwizard">
-      <div class="stepwizard-row setup-panel">
-        <div class="stepwizard-step">
-        <span class="step">1</span>
-        </div>
-        <div class="stepwizard-step">
-        <span class="step">2</span>
-        </div>
-        <div class="stepwizard-step">
-        <span class="step">3</span>
-        </div>
-        <div class="stepwizard-step">
-        <span class="step">4</span>
-        </div>
-      </div>
-  </div>
-</div>
 <!--<p class="text-center blanco small mb5">¿Envías más de un paquete a la misma dirección? <a href="https://envios.guiapaqueteria.com/"><b>Haz Click Aquí</b></a></p>-->
  
 

@@ -38,40 +38,18 @@ get_header();
                 <?php else: ?>
                 <h4 class="blanco text-center">Envía <b class="upper">más barato</b> con nuestros aliados.</h4>
                 <p class="text-center" class="js-lazy-image">
-                    <img data-src="https://guiapaqueteria.com/wp-content/uploads/2017/01/c500-redpack-125x125.png"
-                        alt="redpost" width="45" class="js-lazy-image">
-                    <img data-src="https://guiapaqueteria.com/wp-content/uploads/2016/10/c500-estafeta-125x125.png"
-                        alt="estafeta" width="45" class="js-lazy-image">
-                    <!--<img data-src="https://guiapaqueteria.com/wp-content/uploads/2016/10/c500-dhl-125x125.png" alt="dhl" width="45" class="js-lazy-image">-->
-                    <img data-src="https://guiapaqueteria.com/wp-content/uploads/2016/10/c500-fedex-125x125.png"
-                        alt="fedex" width="45" class="js-lazy-image">
-                    <img data-src="https://guiapaqueteria.com/wp-content/uploads/2016/10/c500-ups-125x125.png" alt="ups"
-                        width="45" class="js-lazy-image">
+	               <img src="<?php echo get_template_directory_uri() . '/images/c500-dhl-125x125.png'; ?>" alt="DHL" width="45" class="js-lazy-image">
+	               <img src="<?php echo get_template_directory_uri() . '/images/c500-fedex-125x125.png'; ?>" alt="fedex" width="45" class="js-lazy-image">
+	               <img src="<?php echo get_template_directory_uri() . '/images/c500-ups-125x125.png'; ?>" alt="ups" width="45" class="js-lazy-image">
                 </p>
                 <h3 class="blanco text-center">Ahorra hasta <b>50%</b> en tu envío</h3>
-
                 <?php endif; ?>
                 <div class="tb20pad">
-                    <p class="blanco text-left">
-                        <img data-src="<?php bloginfo('stylesheet_directory'); ?>/img/arrow.png"
-                            class="js-lazy-image" />
-                        Cotiza y compara tarifas</p>
-                    <p class="blanco text-left">
-                        <img data-src="<?php bloginfo('stylesheet_directory'); ?>/img/arrow.png"
-                            class="js-lazy-image" />
-                        Envíos Nacionales e Internacionales</p>
-                    <p class="blanco text-left">
-                        <img data-src="<?php bloginfo('stylesheet_directory'); ?>/img/arrow.png"
-                            class="js-lazy-image" />
-                        Envía sin salir de casa</p>
-                    <p class="blanco text-left">
-                        <img data-src="<?php bloginfo('stylesheet_directory'); ?>/img/arrow.png"
-                            class="js-lazy-image" />
-                        Recoleción a domicilio incluida</p>
-                    <p class="blanco text-left">
-                        <img data-src="<?php bloginfo('stylesheet_directory'); ?>/img/arrow.png"
-                            class="js-lazy-image" />
-                        Tarifas económicas para empresas</p>
+                    <p class="blanco text-left"><img src="<?php echo get_template_directory_uri() . '/images/arrow.png'; ?>" class="js-lazy-image"> Cotiza y compara tarifas</p>
+                    <p class="blanco text-left"><img src="<?php echo get_template_directory_uri() . '/images/arrow.png'; ?>" class="js-lazy-image"> Envíos Nacionales e Internacionales</p>
+                    <p class="blanco text-left"><img src="<?php echo get_template_directory_uri() . '/images/arrow.png'; ?>" class="js-lazy-image">  Envía sin salir de casa</p>
+                    <p class="blanco text-left"><img src="<?php echo get_template_directory_uri() . '/images/arrow.png'; ?>" class="js-lazy-image">  Recoleción a domicilio incluida</p>
+                    <p class="blanco text-left"><img src="<?php echo get_template_directory_uri() . '/images/arrow.png'; ?>" class="js-lazy-image">  Tarifas económicas para empresas</p>
                 </div>
 
             </div>

@@ -1,0 +1,30 @@
+.BGcoti {background: url(https://guiapaqueteria.com/wp-content/themes/guiapaqueteria-child/img/bg-orange.png);
+background-repeat: repeat; background-position-x: 0%; background-position-y: 0%; background-repeat: repeat; background-position: top; padding: 0; z-index: 2;position: relative}
+
+
+/******************************* FORMULARIO DE COTIZACION **************************************/
+.stepwizard-row { display: table-row; }
+.stepwizard { display: table; width: 100%; position: relative; margin-bottom: 10px; }
+.stepwizard-step p { margin-top: 0px; font-size: 12px; color: #fff; }
+.stepwizard-step button[disabled] { opacity: 1 !important; filter: alpha(opacity=100) !important; }
+.stepwizard-row:before { top: 14px; bottom: 0; position: absolute; content: " "; width: 100%; height: 1px; background-color: #ccc; z-order: 0; }
+.stepwizard-step { display: table-cell; text-align: center; position: relative; }
+.step { width: 24px; height: 24px; padding: 0; border-radius: 50%; background: white; display: inline-block; color: #ccc; font-weight: 600; border: 2px solid #ccc; line-height: 20px }
+.step.active { opacity: 1; background-color: #00bcd4; color: #fff;   border: 2px solid #00bcd4; }
+.step.finish { background-color: #00bcd4; border: 2px solid #fff; color: #fff; } 
+#regForm { margin: 0; background:white; border-radius: 4px; padding: 10px;   /*box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */}
+#regForm p { font-weight: 300}
+#regForm h3{ padding: 0 0 10px 0; margin: 0 0 20px 0; text-align: center; font-weight: 300; font-size: 22px; border-bottom: 1px solid #ddd}
+#regForm label{   font-weight: 300; font-size: 16px; line-height: 16px}
+#regForm h6{   font-weight: 300; text-align: center; font-size: 16px}
+.regBtn {margin: 10px 0; text-align: center; padding: 0}
+.sendPaq input[type=radio] { display:none; }
+.sendPaq input[type=radio] + label { background: url(https://guiapaqueteria.com/wp-content/themes/guiapaqueteria-child/img/paq_off.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
+.sendPaq input[type=radio]:checked + label { background: url(https://guiapaqueteria.com/wp-content/themes/guiapaqueteria-child/img/paq.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
+.sendDoc input[type=radio] { display:none; }
+.sendDoc input[type=radio] + label { background: url(https://guiapaqueteria.com/wp-content/themes/guiapaqueteria-child/img/doc_off.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
+.sendDoc input[type=radio]:checked + label { background: url(https://guiapaqueteria.com/wp-content/themes/guiapaqueteria-child/img/doc.png) no-repeat center; height: 137px; width: 100%; display:inline-block; padding: 0 0 0 0px; }
+.seguroIn  { float: left; display: block; width: auto}
+input { padding: 10px; width: 100%; font-size: 17px; border: 1px solid #aaaaaa; }
+input.invalid { background-color: #ffdddd; border: 1px solid #ff0000; }
+.tab { display: none; }
