@@ -60,7 +60,7 @@ $purified_content = apply_filters('the_content',$post->post_content);
 	echo do_shortcode('[listado_paqueterias]');
 	$listado_paqueterias = ob_get_clean();
 
-	$purified_content = preg_replace('/<h2(.*)>(Paqueterías de Envíos en USA)<\/h2>/', '<h2$1>$2</h2>'.$listado_paqueterias, $purified_content);
+	// $purified_content = preg_replace('/<h2(.*)>(Paqueterías de Envíos en USA)<\/h2>/', '<h2$1>$2</h2>'.$listado_paqueterias, $purified_content);
 ?>
 
 <?php echo $purified_content;?>
