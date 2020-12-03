@@ -91,6 +91,7 @@ foreach ($conn->query($sql) as $row) {
 							<div class="clearfix"></div>
 							<div class="googlemap_wrap">
 								<iframe
+									loading="lazy"
   									width="600"
   									height="450"
   									frameborder="0" style="border:0"
