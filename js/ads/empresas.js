@@ -4,13 +4,13 @@ jQuery(document).ready(function() {
 	    lazyAds.forEach(ad => {
 	        if (ad.offsetTop < window.innerHeight + window.pageYOffset + inAdvance && ad.className.indexOf("loaded") < 0) {
 	            if(ad.id == "adsense_submenu"){
-	            	add_ad("2533847850","","link",ad.id,"");
+	            	add_ad("8918084265","","link",ad.id,"","Guiapaqueteria US Empresas Abajo H1 Submenu");
 	            	ad.classList.add('loaded');
 	            }else if(ad.id == "adsense_servicios"){
-	            	add_ad("8929232790","","auto",ad.id,"");
+	            	add_ad("7744603392","","auto",ad.id,"","Guiapaqueteria US Empresas Abajo H2 Responsive");
 	            	ad.classList.add('loaded');
 	            }else if(ad.id == "adsense_cotiza"){
-	            	add_ad("8954897920","","link",ad.id,"");
+	            	add_ad("5216666492","","link",ad.id,"","Guiapaqueteria US Empresas Abajo H2 Submenu");
 	            	ad.classList.add('loaded');
 	            }
 	        }

@@ -82,7 +82,7 @@ get_header();
 			    <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 text-left fastGuid">
 			    	<a href="<?php echo esc_url(get_permalink(get_the_ID())); ?>"> 
 			    		<div class="cont">
-				    		<img src="<?php echo get_the_post_thumbnail_url($current_post->ID, array( 150, 150) ); ?>" class="img-responsive">
+				    		<img src="<?php echo get_the_post_thumbnail_url($current_post->ID, array( 150, 150) ); ?>" class="img-responsive js-lazy-image">
 				    		<h3><?php the_title(); ?></h3>
 				    		<p><?php echo wp_trim_words(  get_the_content(), 40, '...' );?></p>
 				    	</div>

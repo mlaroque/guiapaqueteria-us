@@ -51,7 +51,7 @@
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left fastGuid">
             <a href="<?php echo get_permalink($guia->ID); ?>">
               <div class="cont">
-                <img src="<?php get_the_post_thumbnail_url($guia->ID);?>" class="img-responsive">
+                <img src="<?php get_the_post_thumbnail_url($guia->ID);?>" class="img-responsive js-lazy-image">
               <h3><?php echo $guia->post_title; ?></h3>
               <p><?php echo wp_trim_words( $guia->post_content, 40, '...' );?></p>
               </div>

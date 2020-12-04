@@ -90,7 +90,7 @@ echo do_shortcode('[buscador_sucursales]');
 
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
- 	<h4 class="text-center"><img src="<?php echo get_the_post_thumbnail_url($post_detalles->post_parent); ?>" class="img-circle" width="70"></h4>
+ 	<h4 class="text-center"><img src="<?php echo get_the_post_thumbnail_url($post_detalles->post_parent); ?>" class="img-circle js-lazy-image" width="70"></h4>
 	</div>
 
 	<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">

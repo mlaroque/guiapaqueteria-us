@@ -92,7 +92,7 @@
 		<a href="<?php echo esc_url( get_permalink() ); ?>">
 			<div class="boxcon text-center">
 				<div class="boxconImg">
-					<img src="<?php the_post_thumbnail_url(); ?>" class="img-circle" alt="<?php the_title(); ?>">
+					<img src="<?php the_post_thumbnail_url(); ?>" class="img-circle js-lazy-image" alt="<?php the_title(); ?>">
 				</div>
 					<div class="LEmpresasname">
  							<p class="text-center"><?php the_title(); ?></p>

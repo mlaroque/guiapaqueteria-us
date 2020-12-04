@@ -61,7 +61,7 @@ get_header(); ?>
 
  	<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
  		<a href="<?php echo esc_url( get_permalink($post_guias->ID)); ?>">
- 			<img src="<?php echo get_the_post_thumbnail_url($post_guias->ID); ?>">
+ 			<img class="js-lazy-image" src="<?php echo get_the_post_thumbnail_url($post_guias->ID); ?>">
  		</a>
  	</div>
 

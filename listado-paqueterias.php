@@ -118,7 +118,7 @@
 <div class="col-xs-1 visible-xs"> </div>
 
 <div class="col-md-3 col-sm-4 col-xs-10 text-center">
-        <img src="<?php the_post_thumbnail_url(); ?>" class="img-circle" alt="<?php the_title(); ?>" width="75%">
+        <img src="<?php the_post_thumbnail_url(); ?>" class="img-circle js-lazy-image" alt="<?php the_title(); ?>" width="75%">
 </div>
 <div class="visible-xs col-md-12"><p><br></p></div>
 <div class="col-md-3 col-sm-8 col-xs-12 pull-right text-center starBoxstar">

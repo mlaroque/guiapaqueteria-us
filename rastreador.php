@@ -82,7 +82,7 @@ foreach($contact_posts as $contact_post):
 						
 						
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div id="loadingDiv"><div style='text-align:center;padding: 20px;'><img src='<?php echo get_stylesheet_directory_uri(); ?>/images/ajax-loader.gif'/></div></div>
+			<div id="loadingDiv"><div style='text-align:center;padding: 20px;'><img class="js-lazy-image" src='<?php echo get_stylesheet_directory_uri(); ?>/images/ajax-loader.gif'/></div></div>
 			
 			<?php if(!$sidebar): ?>
 			<div style="text-align:center;padding-top: 20px;">

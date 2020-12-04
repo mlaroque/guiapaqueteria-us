@@ -72,7 +72,7 @@ $purified_content = apply_filters('the_content',$post->post_content);
 				<a href="<?php echo esc_url( get_permalink($post_giros->ID)); ?>">
 					<div class="boxcon text-center">
 						<div class="boxconImgCasil">
-							<img src="<?php echo get_the_post_thumbnail_url($post_giros->ID); ?>" alt="toda la información sobre <?php echo $post_giros->post_title; ?>">
+							<img class="js-lazy-image" src="<?php echo get_the_post_thumbnail_url($post_giros->ID); ?>" alt="toda la información sobre <?php echo $post_giros->post_title; ?>">
 						</div>
 						<div class="LEmpresasname">
 	 						<p class="text-center"><b><?php echo $post_giros->post_title; ?></b></p>

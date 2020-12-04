@@ -97,22 +97,22 @@
      </div>
 
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-           <a href="https://guiapaqueteria.com/paqueteria/redpack/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-redpack.png" class="img-responsive"></a>
+           <a href="https://guiapaqueteria.com/paqueteria/redpack/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-redpack.png" class="img-responsive js-lazy-image"></a>
       </div>
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-           <a href="https://guiapaqueteria.com/paqueteria/ups/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-ups.png" class="img-responsive"></a>
+           <a href="https://guiapaqueteria.com/paqueteria/ups/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-ups.png" class="img-responsive js-lazy-image"></a>
       </div>
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-           <a href="https://guiapaqueteria.com/paqueteria/fedex/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-fedex.png" class="img-responsive"></a>
+           <a href="https://guiapaqueteria.com/paqueteria/fedex/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-fedex.png" class="img-responsive js-lazy-image"></a>
       </div>
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-           <a href="https://guiapaqueteria.com/paqueteria/estafeta/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-estafeta.png" class="img-responsive"></a>
+           <a href="https://guiapaqueteria.com/paqueteria/estafeta/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-estafeta.png" class="img-responsive js-lazy-image"></a>
       </div>
      <!-- <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
             <a href="https://guiapaqueteria.com/paqueteria/dhl/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-dhl.png" class="img-responsive" /></a>
       </div>-->
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-          <img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-99minutos.png" class="img-responsive">
+          <img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-99minutos.png" class="img-responsive js-lazy-image">
       </div>
        <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 text-center">
      </div>
@@ -132,24 +132,24 @@
             </div>
 
             <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 text-center">
-                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hpa-cotizar.png" class="img-responsive" />
+                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hpa-cotizar.png" class="img-responsive js-lazy-image" />
                   <h4><b class="verde">01.</b> Cotiza</h4>
             </div>
             <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 text-center">
-                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hpa-comparar.png" class="img-responsive" />
+                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hpa-comparar.png" class="img-responsive js-lazy-image" />
                   <h4><b class="verde">02.</b> Compara Ofertas y Elige</h4>
             </div>
 
             <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 text-center">
-                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hpa-datos.png" class="img-responsive" />
+                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hpa-datos.png" class="img-responsive js-lazy-image" />
                   <h4><b class="verde">03.</b> Introduce los datos de tu envío</h4>
             </div>
             <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 text-center">
-                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hpa-paga.png" class="img-responsive" />
+                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hpa-paga.png" class="img-responsive js-lazy-image" />
                   <h4><b class="verde">04.</b> Paga tu envío</h4>
             </div>
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 text-center">
-                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hpa-guia.png" class="img-responsive" />
+                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hpa-guia.png" class="img-responsive js-lazy-image" />
                   <h4><b class="verde">05.</b> Descarga tu guía de envío</h4>
             </div>
 
@@ -173,32 +173,32 @@
           </div>
 <div class="clearfix"></div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck" width="30" />
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck js-lazy-image" width="30" />
             <h4>Tarifas preferenciales en servicios seleccionados.</h4>
           </div>
           
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck" width="30" />
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck js-lazy-image" width="30" />
             <h4>Rastreo avanzado.</h4>
           </div>
           
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck" width="30" />
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck js-lazy-image" width="30" />
             <h4>Libreta de direcciones frecuentes para envíos rápidos.</h4>
           </div>
           
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck" width="30" />
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck js-lazy-image" width="30" />
             <h4>Creación de nuevos envíos con rapidez.</h4>
           </div>
           
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck" width="30" />
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck js-lazy-image" width="30" />
             <h4>Monedero de prepago para pagos más rápidos.</h4>
           </div>
           
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck" width="30" />
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/check.png" class="pull-left hpCheck js-lazy-image" width="30" />
             <h4>Soluciones para tu negocio o tienda en línea.</h4>
           </div>
 <div class="clearfix"></div>
@@ -247,7 +247,7 @@
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left fastGuid">
               <a href="<?php echo esc_url( get_permalink($post_guias->ID)); ?>">
               <div class="cont">
-              <img src="<?php echo get_the_post_thumbnail_url($post_guias->ID); ?>" class="img-responsive">
+              <img src="<?php echo get_the_post_thumbnail_url($post_guias->ID); ?>" class="img-responsive js-lazy-image">
               <h3><?php echo $post_guias->post_title; ?></h3>
               <p><?php echo wp_trim_words( $post_guias->post_content, 15, '...' );?></p>
               </div>

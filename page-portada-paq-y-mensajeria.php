@@ -29,18 +29,7 @@ $purified_content = apply_filters('the_content',$post->post_content);
 		<h1 class="entry-title">Empresas de Servicios de Paquetería y Mensajería</h1>	</header><!-- .entry-header -->
 
 		<div class="lc_ads">
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- Guiapaqueteria US Empresas Listado Abajo H1 Submenu -->
-			<ins class="adsbygoogle"
-			     style="display:block"
-			     data-ad-client="ca-pub-7600038231425274"
-			     data-ad-slot="9965466924"
-			     data-ad-format="link"
-			     data-full-width-responsive="true"></ins>
-			<script>
-			     (adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-
+			<div id="adsense_submenu" class="lc_ads_links lazy-ads"></div>
 		</div>
 
 	<div class="entry-content">
@@ -113,3 +102,6 @@ $purified_content = apply_filters('the_content',$post->post_content);
 </main></div></div></div>
 
 <?php get_footer();?>
+<script async src="<?php echo get_template_directory_uri(); ?>/js/ads/main.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="<?php echo get_template_directory_uri(); ?>/js/ads/empresas-paqueteria-mensajeria.js"></script>

@@ -97,8 +97,7 @@
     </div>
   </div>
 </div>
-
- 
+<script async src="<?php echo get_template_directory_uri(); ?>/js/lazy-load.js"></script>
 </footer> 
 <?php wp_footer(); ?>
 

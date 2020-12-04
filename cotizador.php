@@ -186,7 +186,7 @@
       <div class="removeButton" style="display:none;">
         <div class="col-xs-4 col-md-2 col-lg-2 text-center">
           <div class="form-group blanco">
-            <a href="#" class="btn btn-danger btn-lg bin" onclick="remove_link(this);"><img src="https://guiapaqueteria.com/wp-content/themes/guiapaqueteria-child/images/bin.png"></span></a>
+            <a href="#" class="btn btn-danger btn-lg bin" onclick="remove_link(this);"><img class="js-lazy-image" src="https://guiapaqueteria.com/wp-content/themes/guiapaqueteria-child/images/bin.png"></span></a>
           </div>
         </div>
       </div>
