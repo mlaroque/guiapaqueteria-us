@@ -8,9 +8,13 @@ if($post->post_type === "empresas"){
   $listado_post = get_post(9);
 }else if ($post->post_type === "guias") {
   $listado_post = get_post(366);
+}else if($post->post_type === "casilleros"){
+	$listado_post = get_post(656);
+}else if($post->post_type === "giros"){
+	$listado_post = get_post(658);
+}else if($post->post_type === "paqueterias-en"){
+	$listado_post = get_post(15);
 }
-
-
 
 ?>
 <div class="container">

@@ -280,7 +280,6 @@ get_header();
                                 <?php echo get_template_part("inc/template","breadcrumbs"); ?>
                             </div>
                         </div>
-
                         <div class="col-md-9 col-sm-4 col-xs-12 logoBig">
                             <h1>
                                 <?php the_post_thumbnail('medium'); ?>
@@ -621,11 +620,6 @@ get_header();
 </div>
 
 <!--:::::::::::::::::::::::::::::::TE PODRIA INTERESAR::::::::::::::::::::::::::::::-->
-
-
-
-
-
 <?php get_footer(); ?>
 <script async src="<?php echo get_template_directory_uri(); ?>/js/ads/main.js"></script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
