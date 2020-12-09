@@ -93,28 +93,16 @@
       </div>
 
       <div class="clearfix"></div>
-             <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 text-center">
+             <div class="col-xs-12 col-sm-2 col-md-4 col-lg-4 text-center">
      </div>
-
+ 
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-           <a href="https://guiapaqueteria.com/paqueteria/redpack/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-redpack.png" class="img-responsive js-lazy-image"></a>
+           <a href="https://guiapaqueteria.com/us/empresas/ups/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-ups.png" class="img-responsive js-lazy-image"></a>
       </div>
       <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-           <a href="https://guiapaqueteria.com/paqueteria/ups/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-ups.png" class="img-responsive js-lazy-image"></a>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-           <a href="https://guiapaqueteria.com/paqueteria/fedex/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-fedex.png" class="img-responsive js-lazy-image"></a>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-           <a href="https://guiapaqueteria.com/paqueteria/estafeta/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-estafeta.png" class="img-responsive js-lazy-image"></a>
-      </div>
-     <!-- <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-            <a href="https://guiapaqueteria.com/paqueteria/dhl/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-dhl.png" class="img-responsive" /></a>
-      </div>-->
-      <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-center">
-          <img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-99minutos.png" class="img-responsive js-lazy-image">
-      </div>
-       <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 text-center">
+           <a href="https://guiapaqueteria.com/us/empresas/fedex/"><img src="https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/hp-fedex.png" class="img-responsive js-lazy-image"></a>
+      </div>  
+       <div class="col-xs-12 col-sm-2 col-md-4 col-lg-4 text-center">
      </div>
 </div>
 
