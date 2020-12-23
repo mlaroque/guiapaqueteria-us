@@ -233,9 +233,10 @@ jQuery(document).ready(function() {
 			var ivoy_txt = "";
 			for(var i=0;i<Object.keys(data).length;i++){
 
-				if(Object.keys(data)[i].toLowerCase() === "dhl"){
-					dhl_txt = Object.keys(data)[i];
-				}else if(Object.keys(data)[i].toLowerCase() === "fedex"){
+				// if(Object.keys(data)[i].toLowerCase() === "dhl"){
+				// 	dhl_txt = Object.keys(data)[i];
+				// }else 
+				if(Object.keys(data)[i].toLowerCase() === "fedex"){
 					fedex_txt = Object.keys(data)[i];
 				}else if(Object.keys(data)[i].toLowerCase() === "redpack"){
 					redpack_txt = Object.keys(data)[i];
@@ -255,8 +256,9 @@ jQuery(document).ready(function() {
     		if(data == "error422"){
     			jQuery("#results").append('<h2 style="text-align:center;color:#f00">Faltó algún dato en tu cotización, regresa al cotizador y asegúrate de introducir los datos correctos.</h2><p class="Normal" style="text-align: center;"><a class="btn btn-sm btn-cotizarV" href="https://guiapaqueteria.com/us/cotizador-de-envios/">COTIZA TU ENVÍO AQUÍ</a></p>');
     		}else if(typeof(data) == "string"){
-    			jQuery("#results").append('<h2 style="text-align:center;color:#f00">Disculpa la molestia, estamos mejorando nuestra página. Por favor vuelve en 10 minutos.</h2><p class="Normal" style="text-align: center;"><a class="btn btn-sm btn-cotizarV" href="https://guiapaqueteria.com/us/cotizador-de-envios/">COTIZA TU ENVÍO AQUÍ</a></p>');
-    		}else if(typeof data[dhl_txt] != 'undefined' && data[dhl_txt].length < 1 && typeof data[fedex_txt] != 'undefined' && data[fedex_txt].length < 1 && typeof data[ups_txt] != 'undefined' && data[ups_txt].length < 1 && typeof data[minutos_txt] != 'undefined' && data[minutos_txt].length < 1){
+				jQuery("#results").append('<h2 style="text-align:center;color:#f00">Disculpa la molestia, estamos mejorando nuestra página. Por favor vuelve en 10 minutos.</h2><p class="Normal" style="text-align: center;"><a class="btn btn-sm btn-cotizarV" href="https://guiapaqueteria.com/us/cotizador-de-envios/">COTIZA TU ENVÍO AQUÍ</a></p>');
+				// typeof data[dhl_txt] != 'undefined' && data[dhl_txt].length < 1 &&
+    		}else if(typeof data[fedex_txt] != 'undefined' && data[fedex_txt].length < 1 && typeof data[ups_txt] != 'undefined' && data[ups_txt].length < 1 && typeof data[minutos_txt] != 'undefined' && data[minutos_txt].length < 1){
     			jQuery("#results").append('<h2 style="text-align:center;color:#f00">Lo sentimos. No contamos con servicios de entrega para la ruta o características de tu envío. Por favor intenta reduciendo el tamaño o peso.</h2><p class="Normal" style="text-align: center;"><a class="btn btn-sm btn-cotizarV" href="https://guiapaqueteria.com/us/cotizador-de-envios/">COTIZA TU ENVÍO AQUÍ</a></p>');
     		}else{
 
@@ -272,9 +274,9 @@ jQuery(document).ready(function() {
 
 
 
-			if(typeof data[dhl_txt] != 'undefined'){
-				dhl_items_number = data[dhl_txt].length
-			}
+			// if(typeof data[dhl_txt] != 'undefined'){
+			// 	dhl_items_number = data[dhl_txt].length
+			// }
 			if(typeof data[fedex_txt] != 'undefined'){
 				fedex_items_number = data[fedex_txt].length	
 			}
@@ -294,13 +296,13 @@ jQuery(document).ready(function() {
 			var results_arr = [];
 			
 			//Por cada empresa, usamos el "row" que tenemos guardado en una variable y lo rellenamos con información de vuelta del WS
-			for(var i=0;i<dhl_items_number;i++){
+			// for(var i=0;i<dhl_items_number;i++){
 				
-				if(data[dhl_txt][i]['carrier']){
-					results_arr.push(fillResult(dhl_txt,data,i,htmlResult,data[dhl_txt][i]['currency']));				
-				}
+			// 	if(data[dhl_txt][i]['carrier']){
+			// 		results_arr.push(fillResult(dhl_txt,data,i,htmlResult,data[dhl_txt][i]['currency']));				
+			// 	}
 
-			}
+			// }
 			
 			for(var i=0;i<fedex_items_number;i++){
 				
@@ -388,9 +390,10 @@ function fillResult(carrier,data,i,htmlResult,currency){
 				}
 				
 				//Carrier Service Logo	
-				if(carrier.toLowerCase() == 'dhl'){
-					$htmlResult.find('img').attr('src','https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/c500-dhl.png');
-				}else if(carrier.toLowerCase()  == 'fedex'){
+				// if(carrier.toLowerCase() == 'dhl'){
+				// 	$htmlResult.find('img').attr('src','https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/c500-dhl.png');
+				// }else 
+				if(carrier.toLowerCase()  == 'fedex'){
 					$htmlResult.find('img').attr('src','https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/c500-fedex.png');
 				}else if(carrier.toLowerCase()  == 'redpack'){
 					$htmlResult.find('img').attr('src','https://guiapaqueteria.com/us/wp-content/themes/lacomuna-theme/images/c500-redpack.png');
@@ -431,10 +434,11 @@ function fillResult(carrier,data,i,htmlResult,currency){
 				}
 
 				//Price			
-				if(carrier.toLowerCase() == 'dhl'){
-					$htmlResult.find('.priceV').html(currency + " " + data[''+carrier+''][i]['total_amount']);
-					$htmlResult.find('.cotiDescue').html("");
-				}else{
+				// if(carrier.toLowerCase() == 'dhl'){
+				// 	$htmlResult.find('.priceV').html(currency + " " + data[''+carrier+''][i]['total_amount']);
+				// 	$htmlResult.find('.cotiDescue').html("");
+				// }else
+				if(carrier.toLowerCase() != 'dhl'){
 					$htmlResult.find('.priceV').html(currency + " " + data[''+carrier+''][i]['list_total_amount']);
 				}
 				
