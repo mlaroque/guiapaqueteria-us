@@ -19,7 +19,7 @@ Template Name: PG RASTREADOR
 
 <!--::::::::::::: RASTREADOR ::::::::::::::-->        
  
-          <?php include("rastreador.php"); ?>
+<?php include("rastreador.php"); ?>
    
 <div class="clearfix"></div>
 <!--::::::::::::: RASTREADOR ::::::::::::::-->     	
