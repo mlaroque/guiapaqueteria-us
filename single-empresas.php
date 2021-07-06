@@ -5,11 +5,6 @@
 get_header();
  ?>
 
-
-
-
-
-
 <?php if(!$amp_param):?>
 <?php //if(is_user_logged_in() && current_user_can('administrator') ): echo "testing el nuevo diseño <br> solo se puede ver si eres un usuario loggeado <br> visitantes de la página ven el diseño original"; ?>
 <?php if($post->ID == 437):  ?>
@@ -27,7 +22,7 @@ get_header();
             </div>
 
             <div class="col-md-6 tb20pad pull-left">
-                <h2 class="blanco text-center upper"><?php echo $post->post_title; ?></h2>
+                <h2 class="blanco text-center upper"><?php echo $post->post_title; ?></h2>***
 
                 <?php if($post->ID === 160 || $post->ID === 155 || $post->ID === 55 || $post->ID === 46|| $post->ID === 65): ?>
 
@@ -579,7 +574,6 @@ get_header();
                 </div>
 
                 <div class="clearfix"></div>
-
 
                 <?php 
 		$args = array(
