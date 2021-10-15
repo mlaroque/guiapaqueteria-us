@@ -58,11 +58,12 @@ strong { font-weight: 600}
 .tb60mar {padding: 0; margin: 20px auto}
 .pointer, .pointer:hover { cursor: pointer}
 .hpCheck { margin: 10px 15px 40px 10px}
+.navbar-fixed-top, .navbar-fixed-bottom { position: absolute; right: 0; left: 0; z-index: 1030; }
 .navbar-headerW { width: 100%; border-radius: 0; margin-bottom:0; background-color:#fff; border-bottom: 1px solid #e6eaf2; z-index: 3333}
 .navbar-headerW li:before { content: none; }
 .navbar-headerW li { margin: 0; padding: 0; list-style-type: none;}
 .dropdown-menu > li > a {padding: 7px 20px}
-.navbar-headerW .navbar-nav > li > a { color: #525252;  text-shadow: none; font-size: 15px; text-transform: uppercase; font-weight: 600; padding: 15px; float: left;}
+.navbar-headerW .navbar-nav > li > a { color: #525252;  text-shadow: none; font-size: 15px; text-transform: uppercase; font-weight: 600; padding: 15px 7px; float: left;}
 .navbar-headerW .navbar-nav > li > a:hover, .navbar-headerW .navbar-nav > li > a:focus { color: #ff6123; background-color: transparent; text-decoration: none !important;}
 .navbar-headerW .navbar-nav > .active > a, .navbar-headerW .navbar-nav > .active > a:hover, .navbar-headerW .navbar-nav > .active > a:focus { color: #fff; background-color: #00bcd4}
 .navbar-headerW .navbar-nav > .open > a, .navbar-headerW .navbar-nav > .open > a:hover, .navbar-headerW .navbar-nav > .open > a:focus { color: #fff; background-color: #00bcd4; background-image: none}
