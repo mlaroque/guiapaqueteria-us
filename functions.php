@@ -432,6 +432,11 @@ add_action( 'init', 'add_taxonomies_to_pages' );
     } 
     }
 
+
+//Quitar enlaces de feed en cada página
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+remove_action( 'wp_head', 'feed_links', 2 );
+
 /**
  * Disable the emoji's
  */
